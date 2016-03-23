@@ -12,3 +12,17 @@ D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Release\Eindop
 D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.exe
 D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.pdb
 D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.csprojResolveAssemblyReference.cache
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\bin\Release\Eindopdracht.exe.config
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.exe
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.pdb
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.csprojResolveAssemblyReference.cache
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\MainWindow.g.cs
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\App.g.cs
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht_MarkupCompile.cache
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht_MarkupCompile.lref
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\bin\Release\Eindopdracht.exe
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\bin\Release\Eindopdracht.pdb
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\MainWindow.baml
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.g.resources
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.Properties.Resources.resources
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.csproj.GenerateResource.Cache

@@ -77,7 +77,7 @@ namespace Eindopdracht
                 }
 
 
-                labelTime.Content = timing.duration();
+                labelTime.Content = timing.duration;
                 textBoxArr.Clear();
                 for (int i = 0; i < randomIntArray.Length; i++)
                 {

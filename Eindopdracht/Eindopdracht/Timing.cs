@@ -13,43 +13,64 @@ namespace Eindopdracht
     public class Timing
     {
 
-        // timespans
-        TimeSpan startTime;
-        TimeSpan result;
+        //DLL imports
+        [DllImport("Kernel32.dll")]
+        private static extern bool QueryPerformanceCounter(out long lpPerformanceCount);
 
-        // calls timerclass with initial values
+        [DllImport("Kernel32.dll")]
+        private static extern bool QueryPerformanceFrequency(out long lpFrequency);
+
+
+        private long startTime;
+        private long stopTime;
+        private long frequence;
+
+        //Lock
+        private object _lock = new object();
+
         public Timing()
         {
-            startTime = new TimeSpan(0);
-            result = new TimeSpan(0);
+            //Set defaults to 0
+            startTime = 0;
+            stopTime = 0;
+            frequence = 0;
+
+            // check if counter is supported
+            if (QueryPerformanceFrequency(out frequence) == false)
+            {
+                // Frequency not supported
+                throw new Win32Exception();
+            }
+
+            //Set Process priority & affinity
+            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
+            Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)0x0001;
         }
 
-        // stops mesuring time 
-        public void stop()
-        {
-            Process p = Process.GetCurrentProcess();
-            ProcessThread thread = p.Threads[0];
-            thread.ProcessorAffinity = (IntPtr)1;
-            result = thread.UserProcessorTime;
-        }
-
-        // starts mesuring time
         public void start()
         {
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
-            Process p = Process.GetCurrentProcess();
-            ProcessThread thread = p.Threads[0];
-            thread.ProcessorAffinity = (IntPtr)1;
-            startTime = thread.UserProcessorTime;
-
+            lock (_lock)
+            {
+                QueryPerformanceCounter(out startTime);
+            }
         }
 
-        // retuns duration
-        public TimeSpan duration()
+
+        public void stop()
         {
-            return result - startTime;
+            lock (_lock)
+            {
+                QueryPerformanceCounter(out stopTime);
+            }
+        }
+
+
+        public double duration
+        {
+            get
+            {
+                return (double)(stopTime - startTime) / (double)frequence;
+            }
         }
     }
 }
- 
