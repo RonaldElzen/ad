@@ -39,6 +39,10 @@ namespace Eindopdracht
 
         public void sort(string sortingMethod)
         {
+            var timeUnit = Timing.TimeUnit.Miliseconds;
+            Timing.Result<Timing.NoReturn> result = null;
+
+
             if (Int32.Parse(textBoxArraySize.Text) > 0)
             {
                 int size = Int32.Parse(textBoxArraySize.Text);
@@ -52,32 +56,28 @@ namespace Eindopdracht
                     textBoxOld.Text += randomIntArray[i] + " ";
                 }
 
-              
+
 
                 //Check to see which sorting method needs to be used
 
                 if (sortingMethod.Equals("bubblesort"))
                 {
-                    timing.start();
-                   Sort.BubbleSortArrayList<int>(randomIntArray);
-                    timing.stop();
-
+                    result = Timing.GetTime(() => Sort.BubbleSortArrayList<int>(randomIntArray), timeUnit);
                 }
                 if (sortingMethod.Equals("smartbubblesort"))
                 {
-                    timing.start();
-                    Sort.SmartBubbleSortArrayList<int>(randomIntArray);
-                    timing.stop();
+                    result = Timing.GetTime(() => Sort.SmartBubbleSortArrayList<int>(randomIntArray), timeUnit);
                 }
                 if (sortingMethod.Equals("insertionsort"))
                 {
-                    timing.start();
-                    Sort.InsertionSortArrayList<int>(randomIntArray);
-                    timing.stop();
+                    result = Timing.GetTime(() => Sort.InsertionSortArrayList<int>(randomIntArray), timeUnit);
                 }
 
 
-                labelTime.Content = timing.duration;
+                labelTime.Content = result.Time.ToString();
+
+
+            
                 textBoxArr.Clear();
                 for (int i = 0; i < randomIntArray.Length; i++)
                 {

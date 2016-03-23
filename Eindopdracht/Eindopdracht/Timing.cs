@@ -23,7 +23,7 @@ namespace Eindopdracht
 
         private long startTime;
         private long stopTime;
-        private long frequence;
+        private long frequency;
 
         //Lock
         private object _lock = new object();
@@ -33,10 +33,10 @@ namespace Eindopdracht
             //Set defaults to 0
             startTime = 0;
             stopTime = 0;
-            frequence = 0;
+            frequency = 0;
 
             // check if counter is supported
-            if (QueryPerformanceFrequency(out frequence) == false)
+            if (QueryPerformanceFrequency(out frequency) == false)
             {
                 // Frequency not supported
                 throw new Win32Exception();
@@ -47,7 +47,7 @@ namespace Eindopdracht
             Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)0x0001;
         }
 
-        public void start()
+        public void Start()
         {
             lock (_lock)
             {
@@ -56,7 +56,7 @@ namespace Eindopdracht
         }
 
 
-        public void stop()
+        public void Stop()
         {
             lock (_lock)
             {
@@ -64,13 +64,54 @@ namespace Eindopdracht
             }
         }
 
-
-        public double duration
+        public enum TimeUnit : int
         {
-            get
+            Seconds = 1,
+            Miliseconds = 1000,
+            Nanoseconds = 1000000
+        }
+
+        public class NoReturn
+        {
+        }
+
+        public class Result<T>
+        {
+            public T ReturnValue { get; set; }
+
+            public double Time { get; set; }
+        }
+
+        private double Duration(TimeUnit timeUnit)
+        {
+            return (((double)(stopTime - startTime) / ((double)frequency) * (int)timeUnit));
+        }
+
+
+        public static Result<NoReturn> GetTime(Action action, TimeUnit timeUnit)
+        {
+            return GetTime(() =>
             {
-                return (double)(stopTime - startTime) / (double)frequence;
-            }
+                action.Invoke();
+                return new NoReturn();
+            }, timeUnit);
+        }
+        public static Result<T> GetTime<T>(Func<T> function, TimeUnit timeUnit)
+        {
+            var timing = new Timing();
+
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
+            timing.Start();
+            var returnValue = function.Invoke();
+            timing.Stop();
+
+            return new Result<T>
+            {
+                Time = timing.Duration(timeUnit),
+                ReturnValue = returnValue
+            };
         }
     }
 }
