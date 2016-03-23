@@ -1,0 +1,14 @@
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe.config
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.pdb
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\MainWindow.g.cs
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\App.g.cs
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht_MarkupCompile.cache
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht_MarkupCompile.lref
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\MainWindow.baml
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.g.resources
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb
+D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csprojResolveAssemblyReference.cache
