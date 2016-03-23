@@ -90,24 +90,5 @@ namespace Eindopdracht
             return min;
         }
 
-        //public static void SelectionSort(int[] arr)
-        //{
-        //    int i, j;
-        //    int min;
-
-        //    for (i = 0; i < arr.Length - 1; i++)
-        //    {
-        //        min = i;
-        //        for (j = i + 1; j < arr.Length; j++)
-        //        {
-        //            if (arr[j] < arr[min])
-        //            {
-        //                min = j;
-        //            }
-        //        }
-              
-        //    }
-        //}
-
     }
 }
