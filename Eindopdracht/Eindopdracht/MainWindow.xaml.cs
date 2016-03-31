@@ -164,20 +164,20 @@ namespace Eindopdracht
 
         private void buttonDequeue_Click(object sender, RoutedEventArgs e)
         {
-            Queue.dequeue(queue);
+            ad.Queue.dequeue(queue);
             updateQueue();
         }
-
+        
         private void buttonPush_Click(object sender, RoutedEventArgs e)
         {
-            Stack.push(textBoxStack.Text, stackIndex, stack);
+            ad.Stack.push(textBoxStack.Text, stackIndex, stack);
             updateStack();
             stackIndex++;
         }
 
         private void buttonPop_Click(object sender, RoutedEventArgs e)
         {
-            Stack.pop(stackIndex, stack);
+            ad.Stack.pop(stackIndex, stack);
             updateStack();
             stackIndex--;
         }
