@@ -38,6 +38,9 @@
     <StartupObject>Eindopdracht.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ad">
+      <HintPath>.\ad.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -58,12 +61,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Queue.cs" />
-    <Compile Include="Search.cs" />
-    <Compile Include="Sort.cs" />
-    <Compile Include="Stack.cs" />
-    <Compile Include="Swap.cs" />
-    <Compile Include="Timing.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
