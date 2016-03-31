@@ -139,7 +139,7 @@ namespace Eindopdracht
         private void buttonEnqueue_Click(object sender, RoutedEventArgs e)
         {
     
-            Queue.enqueue(textBoxQueue.Text, queue);
+            ad.Queue.enqueue(textBoxQueue.Text, queue);
             updateQueue();
         }
 
@@ -180,6 +180,11 @@ namespace Eindopdracht
             ad.Stack.pop(stackIndex, stack);
             updateStack();
             stackIndex--;
+        }
+
+        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -6,87 +6,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Eindopdracht"
         mc:Ignorable="d"
-        Title="MainWindow" Height="436" Width="649.833">
-    <Grid Height="394" VerticalAlignment="Top" Margin="8,-6,2,0">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="170*"/>
-            <RowDefinition Height="27*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="242*"/>
-            <ColumnDefinition Width="153*"/>
-            <ColumnDefinition Width="59*"/>
-            <ColumnDefinition Width="42*"/>
-            <ColumnDefinition Width="137*"/>
-        </Grid.ColumnDefinitions>
-        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Margin="0,10,0,0" Width="622" Grid.ColumnSpan="5" Grid.RowSpan="2">
-            <TabControl x:Name="tabControl1" HorizontalAlignment="Left" Height="364" VerticalAlignment="Top" Width="612">
-                <TabItem Header="TabItem" Margin="-2,0">
-                    <Grid Background="#FFF" Margin="0,2,-12,10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="61*"/>
-                            <ColumnDefinition Width="15*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBox x:Name="textBoxOld" HorizontalAlignment="Left" Height="208" Margin="11,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219"/>
-                        <Button x:Name="btnBubble" Content="Bubble" HorizontalAlignment="Left" Margin="142,288,0,0" VerticalAlignment="Top" Width="112" Height="20" Click="btnBubble_Click" RenderTransformOrigin="0.524,1.75"/>
-                        <TextBox x:Name="textBoxArraySize" HorizontalAlignment="Left" Height="22" Margin="248,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
-                        <Label x:Name="label" Content="Size of array" HorizontalAlignment="Left" Margin="142,238,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="88" Height="26"/>
-                        <Button x:Name="btnInsertion" Content="Insertion" HorizontalAlignment="Left" Margin="11,288,0,0" VerticalAlignment="Top" Width="112" Click="btnInsertion_Click" Height="19"/>
-                        <Button x:Name="btnSmart" Content="Smart bubblesort" HorizontalAlignment="Left" Margin="272,288,0,0" VerticalAlignment="Top" Width="112" Click="btnSmart_Click" Height="19"/>
-                        <TextBox x:Name="textBoxNew" HorizontalAlignment="Left" Height="208" Margin="248,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-                        <Label x:Name="label1" Content="Sorting time:" HorizontalAlignment="Left" Margin="477,103,0,0" VerticalAlignment="Top" Width="92" Height="25" Grid.ColumnSpan="2"/>
-                        <Label x:Name="labelTime" Content="Label" HorizontalAlignment="Left" Margin="483,133,0,0" VerticalAlignment="Top" Width="89" Height="25" Grid.ColumnSpan="2"/>
-                        <Label x:Name="labelSorted" Content="Sorted:" HorizontalAlignment="Left" Margin="248,0,0,0" VerticalAlignment="Top" Width="57" Height="25" RenderTransformOrigin="0.518,-0.46"/>
-                        <Label x:Name="labelUnsorted" Content="unsorted:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="71" Height="25" RenderTransformOrigin="0.514,-0.4"/>
-                        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="483,214,0,0" VerticalAlignment="Top" Width="89" Click="btnClear_Click" Height="19" Grid.ColumnSpan="2"/>
-                    </Grid>
-                </TabItem>
-                <TabItem Header="TabItem" Margin="-2,0">
-                    <Grid Background="#FFF">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="25*"/>
-                            <ColumnDefinition Width="43*"/>
-                            <ColumnDefinition Width="76*"/>
-                            <ColumnDefinition Width="452*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBox x:Name="textBoxSearch" HorizontalAlignment="Left" Height="23" Margin="10,249,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="2" Grid.ColumnSpan="2"/>
-                        <Button x:Name="btnSearchBinary" Content="Binary Search" HorizontalAlignment="Left" Margin="10,288,0,0" VerticalAlignment="Top" Width="74" Click="btnSearchBinary_Click" Grid.Column="2" Grid.ColumnSpan="2"/>
-                        <TextBox x:Name="textBoxArr" HorizontalAlignment="Left" Height="208" Margin="0,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Grid.Column="2" Grid.ColumnSpan="2"/>
-                        <Button x:Name="btnSearchSequential" Content="Sequential Search" HorizontalAlignment="Left" Margin="10,313,0,3" Width="74" Click="btnSearchSequential_Click" Grid.Column="2" Grid.ColumnSpan="2"/>
-                    </Grid>
-                </TabItem>
-                <TabItem Header="TabItem" Margin="-3,0,-1,0" Height="22" VerticalAlignment="Top">
-                    <Grid Background="#FFF">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="25*"/>
-                            <ColumnDefinition Width="43*"/>
-                            <ColumnDefinition Width="68*"/>
-                            <ColumnDefinition Width="461*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBox x:Name="textBoxQueue" Grid.Column="3" HorizontalAlignment="Left" Height="22" Margin="49.5,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                        <Label x:Name="label2" Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="52,45,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-                        <TextBox x:Name="textBoxShowQueue" Grid.Column="3" HorizontalAlignment="Left" Height="281" Margin="212.5,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="238"/>
-                        <Button x:Name="buttonEnqueue" Content="Enqueue" Grid.Column="3" HorizontalAlignment="Left" Margin="2.5,170,0,0" VerticalAlignment="Top" Width="74" Click="buttonEnqueue_Click"/>
-                        <Button x:Name="buttonDequeue" Content="Dequeue" Grid.Column="3" HorizontalAlignment="Left" Margin="95.5,170,0,0" VerticalAlignment="Top" Width="74" Click="buttonDequeue_Click"/>
-                    </Grid>
-                </TabItem>
-                <TabItem Header="TabItem" Margin="0,0,-4,0">
-                    <Grid Background="#FFF" Margin="10,-3,14,18">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="25*"/>
-                            <ColumnDefinition Width="43*"/>
-                            <ColumnDefinition Width="68*"/>
-                            <ColumnDefinition Width="461*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBox x:Name="textBoxStack" Grid.Column="3" HorizontalAlignment="Left" Height="22" Margin="49.5,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                        <Label x:Name="label3" Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="52,45,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-                        <TextBox x:Name="textBoxShowStack" Grid.Column="3" HorizontalAlignment="Left" Height="232" Margin="194,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="238"/>
-                        <Button x:Name="buttonPush" Content="Push" Grid.Column="3" HorizontalAlignment="Left" Margin="2.5,170,0,0" VerticalAlignment="Top" Width="74" Click="buttonPush_Click"/>
-                        <Button x:Name="buttonPop" Content="POP" Grid.Column="3" HorizontalAlignment="Left" Margin="95.5,170,0,0" VerticalAlignment="Top" Width="74" Click="buttonPop_Click"/>
-                    </Grid>
-                </TabItem>
-            </TabControl>
+        Title="MainWindow" Height="494.601" Width="702.858">
+    <Grid HorizontalAlignment="Left" Height="441" Margin="26,10,0,0" VerticalAlignment="Top" Width="668">
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="400" Margin="22,22,0,0" VerticalAlignment="Top" Width="603" SelectionChanged="tabControl_SelectionChanged">
+            <TabItem Header="Sorting">
+                <Grid Background="#FFE5E5E5" Margin="0,1,2,1">
+                    <TextBox x:Name="textBoxOld" HorizontalAlignment="Left" Height="208" Margin="23,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219"/>
+                    <Button x:Name="btnBubble" Content="Bubble" HorizontalAlignment="Left" Margin="154,301,0,-31" VerticalAlignment="Top" Width="112" Height="20" Click="btnBubble_Click" RenderTransformOrigin="0.524,1.75"/>
+                    <TextBox x:Name="textBoxArraySize" HorizontalAlignment="Left" Height="22" Margin="260,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+                    <Label x:Name="label" Content="Size of array" HorizontalAlignment="Left" Margin="154,251,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="88" Height="26"/>
+                    <Button x:Name="btnInsertion" Content="Insertion" HorizontalAlignment="Left" Margin="23,301,0,-30" VerticalAlignment="Top" Width="112" Click="btnInsertion_Click" Height="19"/>
+                    <Button x:Name="btnSmart" Content="Smart bubblesort" HorizontalAlignment="Left" Margin="284,301,0,-30" VerticalAlignment="Top" Width="112" Click="btnSmart_Click" Height="19"/>
+                    <TextBox x:Name="textBoxNew" HorizontalAlignment="Left" Height="208" Margin="260,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+                    <Label x:Name="label1" Content="Sorting time:" HorizontalAlignment="Left" Margin="489,116,0,0" VerticalAlignment="Top" Width="92" Height="25"/>
+                    <Label x:Name="labelTime" Content="Label" HorizontalAlignment="Left" Margin="495,146,0,0" VerticalAlignment="Top" Width="89" Height="25"/>
+                    <Label x:Name="labelSorted" Content="Sorted:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" Height="25" RenderTransformOrigin="0.518,-0.46" Margin="260,13,0,0"/>
+                    <Label x:Name="labelUnsorted" Content="unsorted:" HorizontalAlignment="Left" Margin="22,13,0,0" VerticalAlignment="Top" Width="71" Height="25" RenderTransformOrigin="0.514,-0.4"/>
+                    <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="495,227,0,0" VerticalAlignment="Top" Width="89" Click="btnClear_Click" Height="19"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Search">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="textBoxSearch" HorizontalAlignment="Left" Height="24" Margin="195,266,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="btnSearchBinary" Content="Binary Search" HorizontalAlignment="Left" Margin="195,306,0,0" VerticalAlignment="Top" Width="74" Click="btnSearchBinary_Click"/>
+                    <TextBox x:Name="textBoxArr" HorizontalAlignment="Left" Height="208" Margin="185,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Queue">
+                <Grid Background="#FFE5E5E5" Margin="0,1,2,1">
+                    <TextBox x:Name="textBoxQueue" HorizontalAlignment="Left" Height="22" Margin="88,21,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="122"/>
+                    <Label x:Name="label2" Content="Label" HorizontalAlignment="Left" Margin="22,21,0,0" VerticalAlignment="Top" Width="38"/>
+                    <TextBox x:Name="textBoxShowQueue" HorizontalAlignment="Left" Height="281" Margin="252,21,0,-126" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="242"/>
+                    <Button x:Name="buttonEnqueue" Content="Enqueue" HorizontalAlignment="Left" Margin="40,146,0,0" VerticalAlignment="Top" Width="76" Click="buttonEnqueue_Click"/>
+                    <Button x:Name="buttonDequeue" Content="Dequeue" HorizontalAlignment="Left" Margin="134,146,0,0" VerticalAlignment="Top" Width="76" Click="buttonDequeue_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Stack">
+                <Grid Background="#FFE5E5E5" Margin="0,1,2,1">
+                    <TextBox x:Name="textBoxStack" HorizontalAlignment="Left" Height="22" Margin="122,22,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="label3" Content="Label" HorizontalAlignment="Left" Margin="58,22,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="textBoxShowStack" HorizontalAlignment="Left" Height="232" Margin="266,22,0,-78" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="238"/>
+                    <Button x:Name="buttonPush" Content="Push" HorizontalAlignment="Left" Margin="74,146,0,0" VerticalAlignment="Top" Width="74" Click="buttonPush_Click"/>
+                    <Button x:Name="buttonPop" Content="POP" HorizontalAlignment="Left" Margin="168,146,0,0" VerticalAlignment="Top" Width="74" Click="buttonPop_Click"/>
+                </Grid>
+            </TabItem>
         </TabControl>
-
     </Grid>
 </Window>
