@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayList.cs" />
+    <Compile Include="BinaryTree.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="QuadraticHash.cs" />
     <Compile Include="Queue.cs" />
     <Compile Include="Search.cs" />
