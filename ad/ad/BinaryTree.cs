@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    class BinaryTree
+    public class BinaryTree
     {
     private Node rootNode;
     private int counter;

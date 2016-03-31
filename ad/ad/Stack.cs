@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    class Stack
+    public class Stack
     {
 
         public static void push<T>(T item, int index, ArrayList stack) where T : IComparable<T>

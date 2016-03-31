@@ -8,7 +8,7 @@ namespace ad
 {
     //Based on: http://codereview.stackexchange.com/questions/92618/simple-binary-search-tree
 
-    class Node
+    public class Node
     {
         private int num;
         public Node leafLeft;

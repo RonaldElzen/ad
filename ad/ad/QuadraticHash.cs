@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    class QuadraticHash
+    public class QuadraticHash
     {
         string[] arrayString;
         public QuadraticHash(int arraySize)

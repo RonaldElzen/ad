@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    class Queue
+   public class Queue
     {
 
         /// <summary>
