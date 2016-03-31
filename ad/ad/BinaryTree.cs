@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 namespace ad
 {
     class BinaryTree
+    {
     private Node rootNode;
     private int counter;
 
-    public BinarySearchTreecs()
+    public BinaryTree()
     {
         rootNode = null;
         counter = 0;
