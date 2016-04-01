@@ -8,16 +8,16 @@ namespace ad
 {
     class LinkedList<T>
     {
-        protected Node<T> header;
+        protected LNode<T> header;
 
         public LinkedList()
         {
-            header = new Node<T>();
+            header = new LNode<T>();
         }
 
-        private Node<T> find(Object item)
+        private LNode<T> find(Object item)
         {
-            Node<T> current = new Node<T>();
+            LNode<T> current = new LNode<T>();
             current = header;
             while (!(current.Equals(item)))
             {
@@ -28,8 +28,8 @@ namespace ad
 
         public void add(T newItem)
         {
-            Node<T> current = new Node<T>();
-            Node<T> newNode = new Node<T>(newItem);
+            LNode<T> current = new LNode<T>();
+            LNode<T> newNode = new LNode<T>(newItem);
             current = header;
             newNode.next = current.next;
             current.next = newNode;
@@ -37,16 +37,16 @@ namespace ad
 
         public void insert(T newItem, T after)
         {
-            Node<T> current = new Node<T>();
-            Node<T> newNode = new Node<T>(newItem);
+            LNode<T> current = new LNode<T>();
+            LNode<T> newNode = new LNode<T>(newItem);
             current = find(after);
             newNode.next = current.next;
             current.next = newNode;
         }
 
-        private Node<T> findPrevious(T n)
+        private LNode<T> findPrevious(T n)
         {
-            Node<T> current = header;
+            LNode<T> current = header;
             while (!(current.next == null) && (n.Equals(current.next.value)))
             {
                 current = current.next;
@@ -56,7 +56,7 @@ namespace ad
 
         public void remove(T n)
         {
-            Node<T> p = findPrevious(n);
+            LNode<T> p = findPrevious(n);
             if (!(p.next == null))
             {
                 p.next = p.next.next;
@@ -65,7 +65,7 @@ namespace ad
 
         public void printList()
         {
-            Node<T> current = new Node<T>();
+            LNode<T> current = new LNode<T>();
             current = header;
             Console.WriteLine("List:");
             while (!(current.next == null))

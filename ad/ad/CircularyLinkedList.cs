@@ -8,14 +8,14 @@ namespace ad
 {
     class CircularyLinkedList<T>
     {
-        protected Node<T> current;
-        protected Node<T> header;
+        protected LNode<T> current;
+        protected LNode<T> header;
         private int count;
 
         public CircularyLinkedList()
         {
             count = 0;
-            header = new Node<T>();
+            header = new LNode<T>();
             header.next = header;
         }
 
@@ -31,7 +31,7 @@ namespace ad
 
         public void printList()
         {
-            Node<T> current = new Node<T>();
+            LNode<T> current = new LNode<T>();
             current = header;
             while (!(current.next.value.Equals(header.value)))
             {
@@ -40,9 +40,9 @@ namespace ad
             }
         }
 
-        private Node<T> findPrevious(T n)
+        private LNode<T> findPrevious(T n)
         {
-            Node<T> current = header;
+            LNode<T> current = header;
             while (!(current.next == null) && !(current.next.value.Equals(n)))
             {
                 current = current.next;
@@ -50,9 +50,9 @@ namespace ad
             return current;
         }
 
-        private Node<T> find(Object n)
+        private LNode<T> find(Object n)
         {
-            Node<T> current = new Node<T>();
+            LNode<T> current = new LNode<T>();
             current = header.next;
             while (!(current.value.Equals(n)))
             {
@@ -63,7 +63,7 @@ namespace ad
 
         public void remove(T n)
         {
-            Node<T> p = findPrevious(n);
+            LNode<T> p = findPrevious(n);
             if (!(p.next == null))
             {
                 p.next = p.next.next;
@@ -73,8 +73,8 @@ namespace ad
 
         public void insert(T n1, T n2)
         {
-            Node<T> current = new Node<T>();
-            Node<T> newNode = new Node<T>(n1);
+            LNode<T> current = new LNode<T>();
+            LNode<T> newLNode = new LNode<T>(n1);
             current = find(n2);
             newNode.next = current.next;
             current.next = newNode;
@@ -83,15 +83,15 @@ namespace ad
 
         public void add(T n)
         {
-            Node<T> current = new Node<T>(n);
+            LNode<T> current = new LNode<T>(n);
             current.next = header;
             header.next = current;
         }
 
-        public Node<T> Move(int n)
+        public LNode<T> Move(int n)
         {
-            Node<T> current = header.next;
-            Node<T> temp;
+            LNode<T> current = header.next;
+            LNode<T> temp;
             for (int i = 0; i <= n; i++)
             {
                 current = current.next;
