@@ -26,3 +26,6 @@ D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release
 D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.g.resources
 D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.Properties.Resources.resources
 D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.csproj.GenerateResource.Cache
+C:\Users\fvanr\OneDrive\Documenten\GitHub\ad\Eindopdracht\Eindopdracht\bin\Release\Eindopdracht.exe.config
+C:\Users\fvanr\OneDrive\Documenten\GitHub\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.exe
+C:\Users\fvanr\OneDrive\Documenten\GitHub\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.pdb

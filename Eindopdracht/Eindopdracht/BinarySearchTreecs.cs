@@ -12,21 +12,28 @@ namespace BinarySearchTree
     {
         private Node rootNode;
         private int counter;
-
-        public BinarySearchTreecs()
+		
+		//Return  counter
+		public int counter { get; private set; }
+        
+		//Set rootNode on null and set counter on 0 
+		public BinarySearchTreecs()
         {
             rootNode = null;
             counter = 0;
         }
 
+		//Check if rootNode is null
         public bool isEmpty()
         {
             return rootNode == null;
         }
 
-        public void add(int value)
+        //
+		//Add a new node with data
+		public void add(int value)
         {
-            if (value == 0)
+            if (IsEmpty)
             {
                 rootNode = new Node(value);
             }
@@ -38,11 +45,13 @@ namespace BinarySearchTree
             counter++;
         }
 
+		// ?!!?!?!?!?!?!?!?!?!?!?!?!?!?
         public bool search(int search)
         {
             return rootNode.search(rootNode, search);
         }
 
+		// ?!?!!!?!??!?!?!?!??!?!?!?!?!?!?
         public bool isLeaf()
         {
             if (!isEmpty())
@@ -53,6 +62,7 @@ namespace BinarySearchTree
             return true;
         }
 
+		//Display node
         public void display()
         {
             if (!isEmpty())
@@ -61,9 +71,7 @@ namespace BinarySearchTree
             }
         }
 
-        public int Counter()
-        {
-            return counter;
-        }
+       
+
     }
 }
