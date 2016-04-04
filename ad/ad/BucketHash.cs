@@ -64,6 +64,11 @@ namespace ad
                     data[hash_value].Remove(item);
                 }
             }
+
+            public ArrayList[] getBucketHash()
+            {
+                return data;
+            }
         }
     }
 
