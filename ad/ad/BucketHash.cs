@@ -8,8 +8,7 @@ namespace ad
     using System.Text;
     using System.Threading.Tasks;
 
-    namespace Eindopdracht
-    {
+
         public class bucketHash
         {
             //Needs to be dynamic
