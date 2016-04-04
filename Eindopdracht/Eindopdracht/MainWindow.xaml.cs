@@ -24,7 +24,7 @@ namespace Eindopdracht
     /// </summary>
     public partial class MainWindow : Window
     {
-       
+        ad.bucketHash buckethash;
         //int[] testArray = new int[10] { 10, 15, 1, 2, 3, 5, 18, 19, 20, 21 };
         int[] randomIntArray;
         //Queue queue = new Queue();
@@ -48,7 +48,7 @@ namespace Eindopdracht
             if (Int32.Parse(textBoxArraySize.Text) > 0)
             {
                 int size = Int32.Parse(textBoxArraySize.Text);
-                
+
                 randomIntArray = new int[size];
 
                 Random rnd = new Random();
@@ -79,14 +79,14 @@ namespace Eindopdracht
                 labelTime.Content = result.Time.ToString();
 
 
-            
+
                 textBoxArr.Clear();
                 for (int i = 0; i < randomIntArray.Length; i++)
                 {
 
                     textBoxNew.Text += randomIntArray[i] + " ";
                     textBoxArr.Text += randomIntArray[i] + " ";
-         
+
 
 
                 }
@@ -123,8 +123,8 @@ namespace Eindopdracht
             int result;
             int key = int.Parse(textBoxSearch.Text);
             int max = int.Parse(textBoxArraySize.Text);
-            result =  Search.binarySearch(randomIntArray, key, 0, max);
-            MessageBox.Show(result.ToString()); 
+            result = Search.binarySearch(randomIntArray, key, 0, max);
+            MessageBox.Show(result.ToString());
         }
 
         private void btnSearchSequential_Click(object sender, RoutedEventArgs e)
@@ -138,7 +138,7 @@ namespace Eindopdracht
 
         private void buttonEnqueue_Click(object sender, RoutedEventArgs e)
         {
-    
+
             ad.Queue.enqueue(textBoxQueue.Text, queue);
             updateQueue();
         }
@@ -167,7 +167,7 @@ namespace Eindopdracht
             ad.Queue.dequeue(queue);
             updateQueue();
         }
-        
+
         private void buttonPush_Click(object sender, RoutedEventArgs e)
         {
             ad.Stack.push(textBoxStack.Text, stackIndex, stack);
@@ -188,8 +188,27 @@ namespace Eindopdracht
         }
 
         private void buttonCreateHash_Click(object sender, RoutedEventArgs e)
-        { 
-        
+        {
+            buckethash = new ad.bucketHash(int.Parse(textBoxHashSize.Text));
+            GridHash.IsEnabled = true;
+        }
+
+        private void buttonAddToHash_Click(object sender, RoutedEventArgs e)
+        {
+            buckethash.Insert(TextboxAddHash.Text);
+            listBoxHash.Items.Add(buckethash.getBucketHash());
+            ArrayList[] hash = buckethash.getBucketHash();
+
+            for (int i = 0; i < hash.Length; i++)
+            {
+                var innerHash = hash[i];
+                
+                
+                    listBoxHash.Items.Add(innerHash);
+           
+
+            }
+
         }
     }
 }

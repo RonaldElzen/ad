@@ -27,5 +27,3 @@ D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\M
 D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.g.resources
 D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
 D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
-D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\CreateHash.g.cs
-D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\CreateHash.baml
