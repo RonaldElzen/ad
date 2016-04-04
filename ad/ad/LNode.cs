@@ -6,80 +6,21 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    //Based on: http://codereview.stackexchange.com/questions/92618/simple-binary-search-tree
-
-    public class Node
+    class LNode<T> where T : IComparable
     {
-        private int num;
-        public Node leafLeft;
-        public Node leafRight;
+        public T value;
+        public LNode<T> next;
 
-        public Node(int value)
+        public LNode()
         {
-            num = value;
-            leafLeft = null;
-            leafRight = null;
+            value = default(T);
+            next = null;
         }
 
-        public bool isLeaf(ref Node node)
+        public LNode(T thisValue)
         {
-            return (node.leafRight == null && node.leafLeft == null);
-        }
-
-        public void dataInsert(ref Node node, int data)
-        {
-            if (node == null)
-            {
-                node = new Node(data);
-            }
-
-            else if (node.num < data)
-            {
-                dataInsert(ref node.leafRight, data);
-            }
-
-            else if (node.num > data)
-            {
-                dataInsert(ref node.leafLeft, data);
-            }
-        }
-
-        public bool search(Node node, int s)
-        {
-            if (node == null)
-            {
-                return false;
-            }
-
-            if (node.num == s)
-            {
-                return true;
-            }
-
-            else if (node.num < s)
-            {
-                return search(node.leafRight, s);
-            }
-
-            else if (node.num > s)
-            {
-                return search(node.leafLeft, s);
-            }
-
-            return false;
-        }
-
-        public void display(Node n)
-        {
-            if (n == null)
-            {
-                return;
-            }
-
-            display(n.leafLeft);
-            Console.Write(" " + n.num);
-            display(n.leafRight);
+            value = thisValue;
+            next = null;
         }
     }
 }
-

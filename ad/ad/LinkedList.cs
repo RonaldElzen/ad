@@ -6,60 +6,65 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    class LinkedList<T>
+    class LinkedList<T> where T : IComparable
     {
-        protected LNode<T> header;
+        private LNode<T> header;
 
         public LinkedList()
         {
             header = new LNode<T>();
         }
 
-        private LNode<T> find(Object item)
+        public LNode<T> getHeader()
+        {
+            return header;
+        }
+
+        private LNode<T> find(T item)
         {
             LNode<T> current = new LNode<T>();
             current = header;
-            while (!(current.Equals(item)))
+            while (!object.Equals(current.value, item) && current.next != null)
             {
                 current = current.next;
             }
             return current;
         }
 
-        public void add(T newItem)
+        public void add(T item)
         {
             LNode<T> current = new LNode<T>();
-            LNode<T> newNode = new LNode<T>(newItem);
+            LNode<T> newNode = new LNode<T>(item);
             current = header;
             newNode.next = current.next;
             current.next = newNode;
         }
 
-        public void insert(T newItem, T after)
+        public void insert(T item, T after)
         {
             LNode<T> current = new LNode<T>();
-            LNode<T> newNode = new LNode<T>(newItem);
+            LNode<T> newNode = new LNode<T>(item);
             current = find(after);
             newNode.next = current.next;
             current.next = newNode;
         }
 
-        private LNode<T> findPrevious(T n)
+        private LNode<T> findPrevious(T findItem)
         {
             LNode<T> current = header;
-            while (!(current.next == null) && (n.Equals(current.next.value)))
+            while (!(current.next == null) && !current.next.value.Equals(findItem))
             {
                 current = current.next;
             }
             return current;
         }
 
-        public void remove(T n)
+        public void remove(T removeItem)
         {
-            LNode<T> p = findPrevious(n);
-            if (!(p.next == null))
+            LNode<T> temp = findPrevious(removeItem);
+            if (!(temp.next == null))
             {
-                p.next = p.next.next;
+                temp.next = temp.next.next;
             }
         }
 

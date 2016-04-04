@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    class DoublyNode<T>
+    class DoublyNode<T> where T : IComparable
     {
         public T value;
         public DoublyNode<T> next;
