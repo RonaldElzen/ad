@@ -40,21 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="CircularyLinkedList.cs" />
-    <Compile Include="DoublyLinkedList.cs" />
-    <Compile Include="DoublyNode.cs" />
-    <Compile Include="LinkedList.cs" />
-    <Compile Include="Node.cs" />
-=======
     <Compile Include="ArrayList.cs" />
     <Compile Include="BinaryTree.cs" />
+    <Compile Include="BucketHash.cs" />
     <Compile Include="CircularyLinkedList.cs" />
     <Compile Include="DoubleLinkedList.cs" />
     <Compile Include="DoublyNode.cs" />
-    <Compile Include="Node.cs" />
     <Compile Include="QuadraticHash.cs" />
->>>>>>> origin/dll
     <Compile Include="Queue.cs" />
     <Compile Include="Search.cs" />
     <Compile Include="Stack.cs" />

@@ -1,67 +1,67 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 
-namespace ad
-{
-    public class BinaryTree
-    {
-    private Node rootNode;
-    private int counter;
+//namespace ad
+//{
+//    public class BinaryTree
+//    {
+//    private Node rootNode;
+//    private int counter;
 
-    public BinaryTree()
-    {
-        rootNode = null;
-        counter = 0;
-    }
+//    public BinaryTree()
+//    {
+//        rootNode = null;
+//        counter = 0;
+//    }
 
-    public bool isEmpty()
-    {
-        return rootNode == null;
-    }
+//    public bool isEmpty()
+//    {
+//        return rootNode == null;
+//    }
 
-    public void add(int value)
-    {
-        if (value == 0)
-        {
-            rootNode = new Node(value);
-        }
-        else
-        {
-            rootNode.dataInsert(ref rootNode, value);
-        }
+//    public void add(int value)
+//    {
+//        if (value == 0)
+//        {
+//            rootNode = new Node(value);
+//        }
+//        else
+//        {
+//            rootNode.dataInsert(ref rootNode, value);
+//        }
 
-        counter++;
-    }
+//        counter++;
+//    }
 
-    public bool search(int search)
-    {
-        return rootNode.search(rootNode, search);
-    }
+//    public bool search(int search)
+//    {
+//        return rootNode.search(rootNode, search);
+//    }
 
-    public bool isLeaf()
-    {
-        if (!isEmpty())
-        {
-            return rootNode.isLeaf(ref rootNode);
-        }
+//    public bool isLeaf()
+//    {
+//        if (!isEmpty())
+//        {
+//            return rootNode.isLeaf(ref rootNode);
+//        }
 
-        return true;
-    }
+//        return true;
+//    }
 
-    public void display()
-    {
-        if (!isEmpty())
-        {
-            rootNode.display(rootNode);
-        }
-    }
+//    public void display()
+//    {
+//        if (!isEmpty())
+//        {
+//            rootNode.display(rootNode);
+//        }
+//    }
 
-    public int Counter()
-    {
-        return counter;
-    }
-}
-}
+//    public int Counter()
+//    {
+//        return counter;
+//    }
+//}
+//}
