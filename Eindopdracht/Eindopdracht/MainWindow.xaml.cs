@@ -199,13 +199,17 @@ namespace Eindopdracht
             listBoxHash.Items.Add(buckethash.getBucketHash());
             ArrayList[] hash = buckethash.getBucketHash();
 
-            for (int i = 0; i < hash.Length; i++)
+            for (int i = 0; i <= hash.GetUpperBound(0); i++)
             {
-                var innerHash = hash[i];
-                
-                
-                    listBoxHash.Items.Add(innerHash);
-           
+
+
+                if (hash[i] != null)
+                {
+                    var innerHash = hash[i];
+
+                    for(int j = 0; j < innerHash.Count; j++)
+                    listBoxHash.Items.Add(innerHash[j]);
+                }
 
             }
 
