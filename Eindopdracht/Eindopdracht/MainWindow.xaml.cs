@@ -186,6 +186,11 @@ namespace Eindopdracht
         {
 
         }
+
+        private void buttonCreateHash_Click(object sender, RoutedEventArgs e)
+        { 
+        
+        }
     }
 }
 

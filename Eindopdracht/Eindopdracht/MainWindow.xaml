@@ -10,6 +10,13 @@
     <Grid HorizontalAlignment="Left" Height="441" Margin="26,10,0,0" VerticalAlignment="Top" Width="668">
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="400" Margin="22,22,0,0" VerticalAlignment="Top" Width="603" SelectionChanged="tabControl_SelectionChanged">
             <TabItem Header="Sorting">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.416"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
                 <Grid Background="#FFE5E5E5" Margin="0,1,2,1">
                     <TextBox x:Name="textBoxOld" HorizontalAlignment="Left" Height="208" Margin="23,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219"/>
                     <Button x:Name="btnBubble" Content="Bubble" HorizontalAlignment="Left" Margin="154,301,0,-31" VerticalAlignment="Top" Width="112" Height="20" Click="btnBubble_Click" RenderTransformOrigin="0.524,1.75"/>
@@ -48,6 +55,22 @@
                     <TextBox x:Name="textBoxShowStack" HorizontalAlignment="Left" Height="232" Margin="266,22,0,-78" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="238"/>
                     <Button x:Name="buttonPush" Content="Push" HorizontalAlignment="Left" Margin="74,146,0,0" VerticalAlignment="Top" Width="74" Click="buttonPush_Click"/>
                     <Button x:Name="buttonPop" Content="POP" HorizontalAlignment="Left" Margin="168,146,0,0" VerticalAlignment="Top" Width="74" Click="buttonPop_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Hash">
+                <Grid Background="#FFE5E5E5" Margin="0,1,2,1">
+                    <Label x:Name="labelSize" Content="Size:" HorizontalAlignment="Left" Margin="22,56,0,0" VerticalAlignment="Top" Width="71" Height="25" RenderTransformOrigin="0.514,-0.4"/>
+                    <Button x:Name="buttonCreateHash" Content="New Hash" HorizontalAlignment="Left" Margin="18,96,0,0" VerticalAlignment="Top" Width="75" Click="buttonCreateHash_Click"/>
+                    <Grid HorizontalAlignment="Left" Height="370" Margin="303,0,0,0" VerticalAlignment="Top" Width="292" IsEnabled="False">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="11*"/>
+                        </Grid.RowDefinitions>
+                        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="165" Margin="71,109,0,0" VerticalAlignment="Top" Width="160" Grid.RowSpan="2"/>
+                    </Grid>
+                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="72,56,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="buttonAddToHash" Content="Add" HorizontalAlignment="Left" Margin="344,305,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="buttonRemoveFromHash" Content="Remove" HorizontalAlignment="Left" Margin="462,305,0,0" VerticalAlignment="Top" Width="76"/>
                 </Grid>
             </TabItem>
         </TabControl>
