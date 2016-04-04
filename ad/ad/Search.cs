@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    class Search
+   public class Search
     {
 
         //Based on http://www.c-sharpcorner.com/blogs/binary-search-implementation-using-c-sharp1 

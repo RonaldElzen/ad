@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    class Swap
+    public class Swap
     {
         public static void swap<T>(ref T val1, ref T val2)
         {
