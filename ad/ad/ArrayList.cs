@@ -6,23 +6,29 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    public class ArrayList<X>
+    /// <summary>
+    /// ArrayList Class
+    /// </summary>
+    /// <typeparam name="T">Type</typeparam>
+    public class ArrayList<T>
     {
-        private X[] list = new X[0];
+        private T[] list = new T[0];
 
-        //add
-        public void Add(X item)
+        //Add items to the arraylist
+        public void Add(T item)
         {
             Array.Resize(ref list, list.Length + 1);
             list[list.Length - 1] = item;
         }
 
+        //returns the length of the array
         public int Length()
         {
             return list.Length;
         }
 
-        public X Get(int item)
+
+        public T Get(int item)
         {
             return list[item];
         }
@@ -34,21 +40,27 @@ namespace ad
             Array.Resize(ref list, 0);
         }
 
-        //contains 
-        public bool Contains(X item)
+        /// <summary>
+        /// Contains method:Check item exits in the array and returns true if exist
+        /// </summary>
+        /// <param name="item">item</param>
+        /// <returns>true/false</returns>
+        public bool Contains(T item)
         {
             var itemExists = false;
-            foreach (var x in list.Where(x => x.Equals(item)))
+            foreach (var t in list.Where(t => t.Equals(item)))
             {
                 itemExists = true;
             }
             return itemExists;
         }
 
-
-
-        //indexof
-        public int IndexOf(X item)
+        /// <summary>
+        /// check if item exist in array
+        /// </summary>
+        /// <param name="item">int</param>
+        /// <returns></returns>
+        public int IndexOf(T item)
         {
             var index = -1;
             for (var i = 0; i < list.Length; i++)
@@ -62,8 +74,12 @@ namespace ad
             return index;
         }
 
-        //insert
-        public void Insert(int index, X item)
+        /// <summary>
+        /// insert items at given index
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="item"></param>
+        public void Insert(int index, T item)
         {
             if (index <= Length() && index >= 0)
             {
@@ -72,8 +88,12 @@ namespace ad
         }
 
 
-        //remove
-        public void Remove(X item)
+        /// <summary>
+        /// Remove items from array.
+        /// it removes the same number of items at the end of the array
+        /// </summary>
+        /// <param name="item"></param>
+        public void Remove(T item)
         {
             var itemToRemove = new int[list.Length];
             var numberOfItems = 0;
@@ -98,7 +118,10 @@ namespace ad
             Array.Resize(ref list, list.Length - numberOfItems);
         }
 
-        //remove i
+        /// <summary>
+        /// remove items at the index of the array
+        /// </summary>
+        /// <param name="index">type-int</param>
         public void RemoveI(int index)
         {
             for (var i = index; i < list.Length - 1; i++)
@@ -108,7 +131,9 @@ namespace ad
             Array.Resize(ref list, list.Length - 1);
         }
 
-        //shows the arraylist
+        /// <summary>
+        /// print the content
+        /// </summary>
         public void Show()
         {
             for (var i = 0; i < Length(); i++)
