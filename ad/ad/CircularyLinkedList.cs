@@ -34,26 +34,26 @@ namespace ad
         public void makeEmpty()
         {
             header.next = null;
+            count = 0;
         }
 
         /// <summary>
-        /// printing the circulary linked list
+        /// looping over the list and puts the node values in an array
         /// </summary>
-        public void printList()
+        /// <returns>Array with node values</returns>
+        public T[] getList()
         {
             LNode<T> current = new LNode<T>();
-            // starting with at the begin of the list
             current = header;
-            Console.WriteLine("Circulary List:");
-
-            // looping over the circulary linked list and writing it to the console
-            // also checks if it hasn't reached the end of the circulary list so it goes on and makes this an infinite loop
+            T[] returnArray = new T[count];
+            int i = 0;
             while (current.next.value != null && !(current.next.value.ToString() == "header"))
             {
-                Console.WriteLine(current.next.value);
+                returnArray[i] = current.next.value;
                 current = current.next;
+                i++;
             }
-            Console.WriteLine("--------------------------------");
+            return returnArray;
         }
 
         /// <summary>
@@ -104,6 +104,11 @@ namespace ad
             }
         }
 
+        /// <summary>
+        /// inserts a new item to the list after a given node value
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="after"></param>
         public void insert(T item, T after)
         {
             current = new LNode<T>();
@@ -136,24 +141,10 @@ namespace ad
             count++;
         }
 
-        /*
-        public LNode<T> move(int n)
-        {
-            LNode<T> current = header.next;
-            LNode<T> temp;
-            for(int i = 0; i <= n; i++)
-            {
-                current = current.next;
-
-            }
-            if (!(current.value.Equals(header.value)))
-            {
-                current = current.next;
-            }
-            temp = current;
-            return temp;
-        }*/
-
+        /// <summary>
+        /// returns the number of nodes in the list
+        /// </summary>
+        /// <returns>count</returns>
         public int getCount()
         {
             return count;

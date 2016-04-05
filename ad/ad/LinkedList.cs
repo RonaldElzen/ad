@@ -129,12 +129,15 @@ namespace ad
         {
             current = new LNode<T>();
             current = header;
+
             T[] returnArray = new T[count];
             int i = 0;
+
             while (!(current.next == null))
             {
                 returnArray[i] = current.next.value;
                 current = current.next;
+                i++;
             }
             return returnArray;
         }
