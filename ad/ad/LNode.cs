@@ -8,7 +8,9 @@ namespace ad
 {
     class LNode<T> where T : IComparable
     {
+        // Value of the node
         public T value;
+        // The next node in the list
         public LNode<T> next;
 
         public LNode()

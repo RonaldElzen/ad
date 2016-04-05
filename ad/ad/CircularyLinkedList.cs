@@ -19,22 +19,35 @@ namespace ad
             header.next = header;
         }
 
+        /// <summary>
+        /// if the header.next == null, there is nothing in the list.
+        /// </summary>
+        /// <returns>boolean</returns>
         public bool isEmpty()
         {
             return (header.next == null);
         }
 
+        /// <summary>
+        /// Clear the list by making header.next null
+        /// </summary>
         public void makeEmpty()
         {
             header.next = null;
         }
 
+        /// <summary>
+        /// printing the circulary linked list
+        /// </summary>
         public void printList()
         {
             LNode<T> current = new LNode<T>();
+            // starting with at the begin of the list
             current = header;
             Console.WriteLine("Circulary List:");
 
+            // looping over the circulary linked list and writing it to the console
+            // also checks if it hasn't reached the end of the circulary list so it goes on and makes this an infinite loop
             while (current.next.value != null && !(current.next.value.ToString() == "header"))
             {
                 Console.WriteLine(current.next.value);
@@ -43,6 +56,11 @@ namespace ad
             Console.WriteLine("--------------------------------");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="findItem"></param>
+        /// <returns></returns>
         private LNode<T> findPrevious(T findItem)
         {
             LNode<T> current = header;
@@ -55,6 +73,11 @@ namespace ad
             return current;
         }
 
+        /// <summary>
+        /// finds the given object in the circulary list and makes it the current node
+        /// </summary>
+        /// <param name="findObject"></param>
+        /// <returns>current</returns>
         private LNode<T> find(T findObject)
         {
             LNode<T> current = new LNode<T>();
@@ -66,14 +89,20 @@ namespace ad
             return current;
         }
 
+        /// <summary>
+        /// removes a given item from the circulary list
+        /// </summary>
+        /// <param name="findObject"></param>
         public void remove(T findObject)
         {
+            // finds the object which should be removed
             LNode<T> temp = findPrevious(findObject);
             if (!(temp.next == null))
             {
-
+                // linking the previous node to the next node in order to remove the item
                 temp.next = temp.next.next;
             }
+            // decrement the count
             count--;
         }
 
@@ -87,9 +116,15 @@ namespace ad
             count++;
         }
 
-        public void add(T newObject)
+        /// <summary>
+        /// adds a item to the begin of the circulary linked list
+        /// </summary>
+        /// <param name="item"></param>
+        public void add(T item)
         {
-            LNode<T> current = new LNode<T>(newObject);
+            LNode<T> current = new LNode<T>(item); 
+
+            // redirecting the links of the header and previous first node of the list.
             current.next = header.next;
             header.next = current;
             count++;
