@@ -63,10 +63,8 @@ namespace ad
         /// <returns></returns>
         private LNode<T> findPrevious(T findItem)
         {
-            LNode<T> current = header;
-            // hier zit nog een fout in. nullpointer exception. iets dat de header naar 
-            // zichzelf linkt als er verder niets in de class staat
-            while (!(current.next == null) && !current.next.value.Equals(findItem))
+            current = header;
+            while (!(current.next == null) && current.next.value != null && !current.next.value.Equals(findItem))
             {
                 current = current.next;
             }
@@ -78,11 +76,11 @@ namespace ad
         /// </summary>
         /// <param name="findObject"></param>
         /// <returns>current</returns>
-        private LNode<T> find(T findObject)
+        private LNode<T> find(T findItem)
         {
-            LNode<T> current = new LNode<T>();
+            current = new LNode<T>();
             current = header.next;
-            while (!(current.value.Equals(findObject)))
+            while (!(findItem.Equals(default(T))) && current.value != null && !(current.value.Equals(findItem)))
             {
                 current = current.next;
             }
@@ -97,22 +95,28 @@ namespace ad
         {
             // finds the object which should be removed
             LNode<T> temp = findPrevious(findObject);
-            if (!(temp.next == null))
+            if (temp.next != null && temp.next.value != null)
             {
                 // linking the previous node to the next node in order to remove the item
                 temp.next = temp.next.next;
+                // decrement the count
+                count--;
             }
-            // decrement the count
-            count--;
         }
 
-        public void insert(T n1, T n2)
+        public void insert(T item, T after)
         {
-            LNode<T> current = new LNode<T>();
-            LNode<T> newNode = new LNode<T>(n1);
-            current = find(n2);
+            current = new LNode<T>();
+            LNode<T> newNode = new LNode<T>(item);
+
+            // finding the node where the new node should be added after
+            current = find(after);
+
+            // redirecting the links of the nodes
             newNode.next = current.next;
             current.next = newNode;
+
+            // increment the count
             count++;
         }
 
@@ -122,11 +126,13 @@ namespace ad
         /// <param name="item"></param>
         public void add(T item)
         {
-            LNode<T> current = new LNode<T>(item); 
+            LNode<T> current = new LNode<T>(item);
 
             // redirecting the links of the header and previous first node of the list.
             current.next = header.next;
             header.next = current;
+
+            // increment the count
             count++;
         }
 
@@ -147,5 +153,10 @@ namespace ad
             temp = current;
             return temp;
         }*/
+
+        public int getCount()
+        {
+            return count;
+        }
     }
 }
