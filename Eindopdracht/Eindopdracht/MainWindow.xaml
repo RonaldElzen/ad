@@ -59,19 +59,35 @@
             </TabItem>
             <TabItem Header="Hash">
                 <Grid Background="#FFE5E5E5" Margin="0,1,2,1">
-                    <Label x:Name="labelSize" Content="Size:" HorizontalAlignment="Left" Margin="22,56,0,0" VerticalAlignment="Top" Width="71" Height="25" RenderTransformOrigin="0.514,-0.4"/>
-                    <Button x:Name="buttonBucketHash" Content="New BucketHash" HorizontalAlignment="Left" Margin="18,96,0,0" VerticalAlignment="Top" Width="117" Click="buttonCreateHash_Click"/>
-                    <Grid x:Name="GridHash" HorizontalAlignment="Left" Height="370" Margin="303,0,0,0" VerticalAlignment="Top" Width="292">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="20*"/>
-                            <RowDefinition Height="11*"/>
-                        </Grid.RowDefinitions>
-                    </Grid>
-                    <TextBox x:Name="textBoxHashSize" HorizontalAlignment="Left" Height="23" Margin="72,56,0,0" TextWrapping="Wrap" Text="10007" VerticalAlignment="Top" Width="120"/>
-                    <Button x:Name="buttonLinearHash" Content="New Linear Hash" HorizontalAlignment="Left" Margin="18,130,0,0" VerticalAlignment="Top" Width="117" Click="buttonLinearHash_Click"/>
-                    <Button x:Name="buttonQuadraticHash" Content="New Quadratic Hash" HorizontalAlignment="Left" Margin="18,164,0,0" VerticalAlignment="Top" Width="117" Click="buttonQuadraticHash_Click"/>
+                    <Label x:Name="labelSize" Content="Size:" HorizontalAlignment="Left" Margin="231,129,0,0" VerticalAlignment="Top" Width="71" Height="25" RenderTransformOrigin="0.514,-0.4"/>
+                    <Button x:Name="buttonBucketHash" Content="New BucketHash" HorizontalAlignment="Left" Margin="227,169,0,0" VerticalAlignment="Top" Width="170" Click="buttonCreateHash_Click"/>
+                    <TextBox x:Name="textBoxHashSize" HorizontalAlignment="Left" Height="23" Margin="281,129,0,0" TextWrapping="Wrap" Text="10007" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="buttonLinearHash" Content="New Linear Hash" HorizontalAlignment="Left" Margin="227,203,0,0" VerticalAlignment="Top" Width="174" Click="buttonLinearHash_Click"/>
+                    <Button x:Name="buttonQuadraticHash" Content="New Quadratic Hash" HorizontalAlignment="Left" Margin="227,237,0,0" VerticalAlignment="Top" Width="174" Click="buttonQuadraticHash_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Lists">
+                <Grid Background="#FFE5E5E5" Margin="0,1,2,1">
+                    <Button x:Name="buttonLinkedList" Content="LinkedList" HorizontalAlignment="Left" Margin="194,127,0,0" VerticalAlignment="Top" Width="161" Click="buttonLinkedList_Click"/>
+                    <Button x:Name="buttonDoublyList" Content="Doubly LinkedList" HorizontalAlignment="Left" Margin="194,169,0,0" VerticalAlignment="Top" Width="161"/>
+                    <Button x:Name="button2" Content="Cicrulary List" HorizontalAlignment="Left" Margin="194,209,0,0" VerticalAlignment="Top" Width="161"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="ArrayList">
+                <Grid Background="#FFE5E5E5" Margin="0,1,2,1">
+                    <Label x:Name="labelArrayLength" Content="Length: " HorizontalAlignment="Left" Margin="3,71,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.491,-0.231"/>
+                    <Button x:Name="buttonClearArray" Content="Clear" HorizontalAlignment="Left" Margin="283,254,0,0" VerticalAlignment="Top" Width="75"/>
+                    <TextBox x:Name="textBoxContains" HorizontalAlignment="Left" Height="23" Margin="114,148,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBoxGetItem" HorizontalAlignment="Left" Height="23" Margin="114,108,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="buttonGetItem" Content="Get Item" HorizontalAlignment="Left" Margin="3,112,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="buttonContains" Content="Contains" HorizontalAlignment="Left" Margin="3,151,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="buttonAddArr" Content="Add" HorizontalAlignment="Left" Margin="3,234,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+                    <TextBox x:Name="textBoxArrayItem" HorizontalAlignment="Left" Height="23" Margin="3,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="231"/>
+                    <Button x:Name="buttonRemove" Content="Remove" HorizontalAlignment="Left" Margin="159,239,0,0" VerticalAlignment="Top" Width="75"/>
+                    <ListBox x:Name="listBoxArrayList" HorizontalAlignment="Left" Height="230" Margin="283,10,0,0" VerticalAlignment="Top" Width="302"/>
                 </Grid>
             </TabItem>
         </TabControl>
+        <Label x:Name="label4" Content="Label" HorizontalAlignment="Left" Margin="942,246,-402,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>

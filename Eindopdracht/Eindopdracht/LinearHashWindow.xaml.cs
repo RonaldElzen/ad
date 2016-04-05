@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ad;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,14 +21,45 @@ namespace Eindopdracht
     /// </summary>
     public partial class LinearHashWindow : Window
     {
+        ad.LinearHash linearHash;
+
         public LinearHashWindow(ad.LinearHash linearHash)
         {
+            this.linearHash = linearHash;
             InitializeComponent();
+            
+        }
+
+
+
+     
+        private void buttonRemoveFromHash_Click(object sender, RoutedEventArgs e)
+        {
+            linearHash.Remove(TextboxAddHash.Text);
+            show();
         }
 
         private void buttonAddToHash_Click(object sender, RoutedEventArgs e)
         {
+            linearHash.Insert(TextboxAddHash.Text);
+            show();
+        } 
 
+        private void show()
+        {
+            listBoxHash.Items.Clear();
+            string[] hash = linearHash.GetLinearHash();
+            for (int i = 0; i <= hash.GetUpperBound(0); i++)
+            {
+
+               
+
+                if (hash[i] != null)
+                {
+                 listBoxHash.Items.Add("Key " + i + " Value " + hash[i]);
+                }
+
+            }
         }
     }
 }

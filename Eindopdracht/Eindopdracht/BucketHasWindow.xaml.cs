@@ -21,18 +21,19 @@ namespace Eindopdracht
     /// </summary>
     public partial class BucketHasWindow : Window
     {
-        ad.BucketHash bucketHash;
+        ad.BucketHash<string> bucketHash;
 
-        public BucketHasWindow(ad.BucketHash bucketHash)
+        public BucketHasWindow(int size)
         {
-            this.bucketHash = bucketHash;
+            bucketHash = new ad.BucketHash<string>(size);
+            
             InitializeComponent();
         }
 
         private void buttonAddToHash_Click(object sender, RoutedEventArgs e)
         {
+
             bucketHash.Insert(TextboxAddHash.Text);
-            listBoxHash.Items.Add(bucketHash.getBucketHash());
             show();
         }
 
@@ -47,6 +48,7 @@ namespace Eindopdracht
 
         private void show()
         {
+            listBoxHash.Items.Clear();
             ArrayList[] hash = bucketHash.getBucketHash();
             for (int i = 0; i <= hash.GetUpperBound(0); i++)
             {
@@ -55,9 +57,9 @@ namespace Eindopdracht
                 if (hash[i] != null)
                 {
                     var innerHash = hash[i];
-
+                    
                     for (int j = 0; j < innerHash.Count; j++)
-                        listBoxHash.Items.Add(innerHash[j]);
+                        listBoxHash.Items.Add("Key " + i + " Value " + innerHash[j]);
                 }
 
             }

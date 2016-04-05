@@ -25,12 +25,12 @@ namespace Eindopdracht
     public partial class MainWindow : Window
     {
       
-        ad.LinearHash linearHash;
-        //int[] testArray = new int[10] { 10, 15, 1, 2, 3, 5, 18, 19, 20, 21 };
+        ad.ArrayList<string> arrList = new ad.ArrayList<string>();
         int[] randomIntArray;
         //Queue queue = new Queue();
         public ArrayList queue;
         public ArrayList stack;
+
         public int stackIndex = -1;
         Timing timing = new Timing();
         public MainWindow()
@@ -190,9 +190,8 @@ namespace Eindopdracht
 
         private void buttonCreateHash_Click(object sender, RoutedEventArgs e)
         {
-            
-            ad.BucketHash buckethash = new ad.BucketHash(int.Parse(textBoxHashSize.Text));
-            var bucketWindow = new BucketHasWindow(buckethash);
+
+            var bucketWindow = new BucketHasWindow(int.Parse(textBoxHashSize.Text));
             bucketWindow.Show();
         }
 
@@ -200,14 +199,42 @@ namespace Eindopdracht
 
         private void buttonLinearHash_Click(object sender, RoutedEventArgs e)
         {
-            linearHash = new ad.LinearHash(int.Parse(textBoxHashSize.Text));
-            GridHash.IsEnabled = true;
+            ad.LinearHash linearHash = new ad.LinearHash(int.Parse(textBoxHashSize.Text));
+            var linearWindow = new LinearHashWindow(linearHash);
+            linearWindow.Show();
+       
         }
 
         private void buttonQuadraticHash_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+        private void buttonLinkedList_Click(object sender, RoutedEventArgs e)
+        {
+            LinkedListWindow linkedWindow = new LinkedListWindow();
+            linkedWindow.Show();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            arrList.Add(textBoxArrayItem.Text);
+            updateArrayList();
+        }
+
+       private void updateArrayList()
+        {
+            string[] arrayList;
+            listBoxArrayList.Items.Clear();
+            arrayList = arrList.getArrayList();
+
+            foreach (string value in arrayList)
+            {
+                listBoxArrayList.Items.Add(value);
+            }
+        }
+
+
     }
 }
 
