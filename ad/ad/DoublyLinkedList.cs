@@ -9,10 +9,12 @@ namespace ad
     class DoublyLinkedList<T> where T : IComparable
     {
         private DoublyNode<T> header;
+        private int count;
 
         public DoublyLinkedList()
         {
             header = new DoublyNode<T>(default(T));
+            count = 0;
         }
 
         /// <summary>
@@ -39,8 +41,7 @@ namespace ad
         public void add(T item)
         {
             DoublyNode<T> newItem = new DoublyNode<T>(item);
-
-            // deze moet nog gecontrolleerd worden
+            
             if (header.next != null)
             {
                 newItem.next = header.next;
@@ -53,7 +54,7 @@ namespace ad
                 header.next = newItem;
                 newItem.previous = header;
             }
-
+            count++;
         }
 
         /// <summary>
@@ -73,6 +74,9 @@ namespace ad
             newItem.next = current.next;
             newItem.previous = current;
             current.next = newItem;
+
+            // increment count
+            count++;
         }
 
         /// <summary>
@@ -90,7 +94,6 @@ namespace ad
             return current;
         }
 
-        // Werkt nog niet compleet. kan laatste item in list niet verwijderen
         /// <summary>
         /// Removes a item from the list
         /// </summary>
@@ -107,6 +110,7 @@ namespace ad
                 temp.next.previous = temp.previous;
                 temp.next = null;
                 temp.previous = null;
+                count--;
             }
             // The last one should be removed
             else if (temp.previous != null)
@@ -114,25 +118,36 @@ namespace ad
                 temp.previous.next = null;
                 temp.next = null;
                 temp.previous = null;
+                count--;
             }
         }
 
         /// <summary>
-        /// Printing the list to the console
+        /// returns the total nodes in the list, excluded the header node
         /// </summary>
-        public void printList()
+        /// <returns>count</returns>
+        public int getCount()
+        {
+            return count;
+        }
+
+        /// <summary>
+        /// Putting the values of the nodes in an array
+        /// </summary>
+        /// <returns>Array containing the node value's</returns>
+        public T[] getList()
         {
             DoublyNode<T> current = new DoublyNode<T>();
+            T[] returnArray = new T[count];
+            int i = 0;
             current = header;
-            Console.WriteLine("Normal List:");
-
-            // looping over the list and writing it to the console
             while (!(current.next == null))
             {
-                Console.WriteLine(current.next.value);
+                returnArray[i] = current.next.value;
                 current = current.next;
+                i++;
             }
-            Console.WriteLine("--------------------------------");
+            return returnArray;
         }
 
         /// <summary>
@@ -151,25 +166,24 @@ namespace ad
         }
 
         /// <summary>
-        /// writing the doubly linked list in reverse to the console
+        /// Putting the values of the nodes in reversed order in an array
         /// </summary>
-        public void printReverse()
+        /// <returns>Array containing the node value's in reverse</returns>
+        public T[] getReverseList()
         {
             DoublyNode<T> current = new DoublyNode<T>();
-
-            // Finding the last node and making it the current node to start with
             current = findLast();
-            Console.WriteLine("Reverse List:");
 
-            // looping over the doubly linked list and writing it to the console.
+            T[] returnArray = new T[count];
+            int i = 0;
+
             while (!(current.previous == null))
             {
-                Console.WriteLine(current.value);
-                // go to the previous node to print it in reverse
+                returnArray[i] = current.value;
                 current = current.previous;
+                i++;
             }
-            Console.WriteLine("--------------------------------");
-
+            return returnArray;
         }
     }
 }
