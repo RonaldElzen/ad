@@ -38,7 +38,8 @@
     <StartupObject>Eindopdracht.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ad">
+    <Reference Include="ad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>.\ad.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -61,6 +62,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="BucketHasWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LinearHashWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,6 +77,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BucketHasWindow.xaml.cs">
+      <DependentUpon>BucketHasWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LinearHashWindow.xaml.cs">
+      <DependentUpon>LinearHashWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

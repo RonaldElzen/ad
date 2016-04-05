@@ -24,7 +24,8 @@ namespace Eindopdracht
     /// </summary>
     public partial class MainWindow : Window
     {
-        ad.bucketHash buckethash;
+      
+        ad.LinearHash linearHash;
         //int[] testArray = new int[10] { 10, 15, 1, 2, 3, 5, 18, 19, 20, 21 };
         int[] randomIntArray;
         //Queue queue = new Queue();
@@ -189,29 +190,22 @@ namespace Eindopdracht
 
         private void buttonCreateHash_Click(object sender, RoutedEventArgs e)
         {
-            buckethash = new ad.bucketHash(int.Parse(textBoxHashSize.Text));
+            
+            ad.BucketHash buckethash = new ad.BucketHash(int.Parse(textBoxHashSize.Text));
+            var bucketWindow = new BucketHasWindow(buckethash);
+            bucketWindow.Show();
+        }
+
+
+
+        private void buttonLinearHash_Click(object sender, RoutedEventArgs e)
+        {
+            linearHash = new ad.LinearHash(int.Parse(textBoxHashSize.Text));
             GridHash.IsEnabled = true;
         }
 
-        private void buttonAddToHash_Click(object sender, RoutedEventArgs e)
+        private void buttonQuadraticHash_Click(object sender, RoutedEventArgs e)
         {
-            buckethash.Insert(TextboxAddHash.Text);
-            listBoxHash.Items.Add(buckethash.getBucketHash());
-            ArrayList[] hash = buckethash.getBucketHash();
-
-            for (int i = 0; i <= hash.GetUpperBound(0); i++)
-            {
-
-
-                if (hash[i] != null)
-                {
-                    var innerHash = hash[i];
-
-                    for(int j = 0; j < innerHash.Count; j++)
-                    listBoxHash.Items.Add(innerHash[j]);
-                }
-
-            }
 
         }
     }
