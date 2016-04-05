@@ -10,10 +10,12 @@ namespace ad
     {
         private LNode<T> header;
         private LNode<T> current;
+        private int count;
 
         public LinkedList()
         {
             header = new LNode<T>();
+            count = 0;
         }
 
         /// <summary>
@@ -56,6 +58,7 @@ namespace ad
             current = header;
             newItem.next = current.next;
             current.next = newItem;
+            count++;
         }
 
         /// <summary>
@@ -74,6 +77,7 @@ namespace ad
             // Redirecting the newnode.next to current.next and current.next to newItem
             newNode.next = current.next;
             current.next = newNode;
+            count++;
         }
 
         /// <summary>
@@ -104,24 +108,35 @@ namespace ad
             {
                 // linking the previous node to the next node for the removeItem
                 temp.next = temp.next.next;
+                count--;
             }
         }
 
         /// <summary>
-        /// Printing the list to the console
+        /// returns the number of nodes in the list
         /// </summary>
-        public void printList()
+        /// <returns>count</returns>
+        public int getCount()
+        {
+            return count;
+        }
+
+        /// <summary>
+        /// looping over the list and adding the node values to an array
+        /// </summary>
+        /// <returns>Array of node values</returns>
+        public T[] getList()
         {
             current = new LNode<T>();
             current = header;
-            Console.WriteLine("List:");
-            // looping and printing the list.
+            T[] returnArray = new T[count];
+            int i = 0;
             while (!(current.next == null))
             {
-                Console.WriteLine(current.next.value);
+                returnArray[i] = current.next.value;
                 current = current.next;
             }
-            Console.WriteLine("--------------------------------");
+            return returnArray;
         }
     }
 }
