@@ -97,18 +97,23 @@ namespace ad
         /// <param name="removeItem"></param>
         public void remove(T removeItem)
         {
+            // finding the previous node from the item that should be removed
             DoublyNode<T> temp = find(removeItem);
-            if (!(temp.next == null))
+            // check if the item that should be removed isnt the last item
+            if (temp.next != null)
             {
+                // redirect links of nodes
                 temp.previous.next = temp.next;
                 temp.next.previous = temp.previous;
                 temp.next = null;
                 temp.previous = null;
             }
-            // nodes laten linken als het de laatste node is
-            else
+            // The last one should be removed
+            else if (temp.previous != null)
             {
-
+                temp.previous.next = null;
+                temp.next = null;
+                temp.previous = null;
             }
         }
 
