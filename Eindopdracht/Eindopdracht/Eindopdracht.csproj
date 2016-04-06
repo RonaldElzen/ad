@@ -62,7 +62,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CircularyListWindow.xaml.cs">
+      <DependentUpon>CircularyListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuadraticHashWindow.xaml.cs">
+      <DependentUpon>QuadraticHashWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="BucketHasWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CircularyListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DoublyLinkedList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -85,6 +99,9 @@
     <Compile Include="BucketHasWindow.xaml.cs">
       <DependentUpon>BucketHasWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DoublyLinkedList.xaml.cs">
+      <DependentUpon>DoublyLinkedList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LinearHashWindow.xaml.cs">
       <DependentUpon>LinearHashWindow.xaml</DependentUpon>
     </Compile>
@@ -95,8 +112,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PriorityQueueWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuadraticHashWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PriorityQueueWindow.xaml.cs">
+      <DependentUpon>PriorityQueueWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

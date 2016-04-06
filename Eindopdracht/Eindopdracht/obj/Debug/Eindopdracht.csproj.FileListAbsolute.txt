@@ -51,3 +51,11 @@ C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properti
 C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
 C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\LinkedListWindow.g.cs
 C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\LinkedListWindow.baml
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\DoublyLinkedList.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\DoublyLinkedList.baml
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\PriorityQueueWindow.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\PriorityQueueWindow.baml
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\QuadraticHashWindow.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\QuadraticHashWindow.baml
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\CircularyListWindow.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\CircularyListWindow.baml
