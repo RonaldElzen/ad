@@ -7,16 +7,21 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    public class Stack
+    public class Stack<T>
     {
+        ArrayList stack = new ArrayList();
+        public Stack()
+        {
 
-        public static void push<T>(T item, int index, ArrayList stack) where T : IComparable<T>
+        }
+
+        public void push<T>(T item, int index) where T : IComparable<T>
         {
             stack.Add(item);
             index = index + 1;
         }
 
-        public static object pop(int index, ArrayList stack)
+        public  object pop(int index)
         {
             object value = stack[index];
             stack.RemoveAt(index);
@@ -24,15 +29,20 @@ namespace ad
             return value;
         }
 
-        public static int getLength(ArrayList stack)
+        public int getLength(ArrayList stack)
         {
             return stack.Count;
         }
 
-        public static void clear(int index, ArrayList stack)
+        public  void clear(int index, ArrayList stack)
         {
             stack.Clear();
             index = -1;
+        }
+
+        public ArrayList getStack()
+        {
+            return stack;
         }
     }
 }

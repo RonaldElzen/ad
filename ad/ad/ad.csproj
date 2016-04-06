@@ -47,6 +47,7 @@
     <Compile Include="DoublyLinkedList.cs" />
     <Compile Include="DoublyNode.cs" />
     <Compile Include="Iterator.cs" />
+    <Compile Include="LinearHash.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="LNode.cs" />
     <Compile Include="PriorityQueue.cs" />

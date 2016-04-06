@@ -9,12 +9,12 @@ namespace ad
     using System.Threading.Tasks;
 
 
-    public class bucketHash<T>
+    public class BucketHash<T>
     {
        
-        int size = 0;
+        
         ArrayList[] data;
-        public bucketHash(int size)
+        public BucketHash(int size)
         {
 
 
