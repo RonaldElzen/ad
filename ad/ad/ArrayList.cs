@@ -31,7 +31,14 @@ namespace ad
 
         public T Get(int item)
         {
-            return list[item];
+            try
+            {
+                return list[item];
+            }
+            catch (System.FormatException e)
+            {
+                return default(T);
+            }
         }
 
 
