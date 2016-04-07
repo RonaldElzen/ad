@@ -8,11 +8,8 @@ namespace ad
 {
     public static class Sort
     {
-
         public static void BubbleSortArrayList<T>(this T[] arr) where T : IComparable<T>
         {
-
-
             // Outer loop
             for (var i = 0; i < arr.Length; i++)
             {
@@ -59,11 +56,7 @@ namespace ad
         }
         public static void SmartBubbleSortArrayList<T>(this T[] arr) where T : IComparable<T>
         {
-
             bool swapped = false;
-
-
-
 
             // Outer loop
             for (var i = 0; i < arr.Length; i++)
@@ -79,14 +72,11 @@ namespace ad
                         Swap.swap<T>(ref arr[j], ref arr[j + 1]);
                         swapped = true;
                     }
-
-
                 }
                 if (swapped == false)
                 {
                     i = arr.Length;
                 }
-
             }
         }
     }

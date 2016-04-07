@@ -1,21 +1,20 @@
-﻿namespace ad
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ad
 {
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-
-
-    public class LinearHash
+    public class LinearHash<T> where T : IComparable
     {
 
-        string[] data;
+        T[] data;
 
         public LinearHash(int size)
         {
-            data = new string[size];
+            data = new T[size];
 
         }
 
@@ -42,7 +41,7 @@
             return (int)tot;
         }
 
-        public void Insert(string item)
+        public void Insert(T item)
         {
             int hash_value;
             hash_value = Hash(item);
@@ -56,7 +55,7 @@
 
         }
 
-        public void Remove(string item)
+        public void Remove(T item)
         {
             int hash_value = Hash(item);
             int i = 0;
@@ -65,10 +64,10 @@
                 i++;
                 hash_value = hash_value + 1 % data.GetUpperBound(0);
             }
-            data[hash_value] = null;
+            data[hash_value] = default(T);
         }
 
-        public string[] GetLinearHash()
+        public T[] GetLinearHash()
         {
             return data;
         }

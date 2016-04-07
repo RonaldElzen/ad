@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="ArrayList.cs" />
     <Compile Include="BinarySearchTree.cs" />
-    <Compile Include="BinaryTree.cs" />
     <Compile Include="BucketHash.cs" />
     <Compile Include="CircularyLinkedList.cs" />
     <Compile Include="DoublyLinkedList.cs" />

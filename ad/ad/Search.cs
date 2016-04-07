@@ -11,14 +11,9 @@ namespace ad
 
         //Based on http://www.c-sharpcorner.com/blogs/binary-search-implementation-using-c-sharp1 
         public static int binarySearch(int[] inputArray, int key, int min, int max)
-
         {
-
             while (min <= max)
-
             {
-
-
                 //Search for the mid point
                 int mid = (min + max) / 2;
 
