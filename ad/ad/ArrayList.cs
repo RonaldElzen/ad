@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -134,12 +135,9 @@ namespace ad
         /// <summary>
         /// print the content
         /// </summary>
-        public void Show()
+        public T[] getArrayList()
         {
-            for (var i = 0; i < Length(); i++)
-            {
-                Console.WriteLine(list[i]);
-            }
+            return list;
         }
 
 

@@ -10,7 +10,7 @@ namespace ad
     /// <summary>
     /// Create a queue in which items can be stored.
     /// </summary>
-    class Queue<T>
+  public  class Queue<T>
     {
         public List<T> queue = new List<T>();
 
@@ -64,7 +64,8 @@ namespace ad
         public void setArrayList(ArrayList newQueue)
         {
             queue.Clear();
-            foreach (T item in newQueue)                     //clear the queue and then add the items of the newQueue ArrayList to queue
+            //clear the queue and then add the items of the newQueue ArrayList to queue
+            foreach (T item in newQueue)                     
             {
                 queue.Add(item);
             }
@@ -74,25 +75,15 @@ namespace ad
         /// Return the items from queue in a ArrayList so they can be used in other classes.
         /// </summary>
         /// <returns>the items of the list queue in a arraylist</returns>
-        public ArrayList getArrayList()
+        public ArrayList getQueue()
         {
             ArrayList newQueue = new ArrayList();
-            foreach (T item in queue)                        //add the items of queue to the arraylist newQueue.
+            //add the items of queue to the arraylist newQueue.
+            foreach (T item in queue)                        
             {
                 newQueue.Add(item);
             }
             return newQueue;
-        }
-
-        /// <summary>
-        /// Print a test line to the console output.
-        /// </summary>
-        public void printArray()
-        {
-            for (int i = 0; i < queue.Count; i++)
-            {
-                Console.WriteLine("item: " + queue[i]);
-            }
         }
     }
 }

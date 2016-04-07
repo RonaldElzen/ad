@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\
 Eindopdracht
 none
 false
 DEBUG;TRACE
-D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\App.xaml
-11151548125
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\App.xaml
+8-559513105
 
-15-427659675
-13738642453
-MainWindow.xaml;
+16-1812565595
+14-156629973
+BucketHasWindow.xaml;CircularyListWindow.xaml;DoublyLinkedList.xaml;LinearHashWindow.xaml;LinkedListWindow.xaml;MainWindow.xaml;PriorityQueueWindow.xaml;QuadraticHashWindow.xaml;
 
-True
+False
 

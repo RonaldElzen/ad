@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    class LNode<T> where T : IComparable
+   public class LNode<T> where T : IComparable
     {
         // Value of the node
         public T value;
@@ -23,6 +23,10 @@ namespace ad
         {
             value = thisValue;
             next = null;
+        }
+        public T getValue()
+        {
+            return value;
         }
     }
 }

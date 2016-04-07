@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    class CircularyLinkedList<T> where T : IComparable
+  public  class CircularyLinkedList<T> where T : IComparable
     {
         private LNode<T> current;
         private LNode<T> header;
@@ -61,7 +61,7 @@ namespace ad
         /// </summary>
         /// <param name="findItem"></param>
         /// <returns></returns>
-        private LNode<T> findPrevious(T findItem)
+        public LNode<T> findPrevious(T findItem)
         {
             current = header;
             while (!(current.next == null) && current.next.value != null && !current.next.value.Equals(findItem))
@@ -76,7 +76,7 @@ namespace ad
         /// </summary>
         /// <param name="findObject"></param>
         /// <returns>current</returns>
-        private LNode<T> find(T findItem)
+        public LNode<T> find(T findItem)
         {
             current = new LNode<T>();
             current = header.next;

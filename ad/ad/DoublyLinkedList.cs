@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    class DoublyLinkedList<T> where T : IComparable
+   public class DoublyLinkedList<T> where T : IComparable
     {
         private DoublyNode<T> header;
         private int count;
@@ -23,7 +23,7 @@ namespace ad
         /// </summary>
         /// <param name="item"></param>
         /// <returns>current</returns>
-        private DoublyNode<T> find(T item)
+        public DoublyNode<T> find(T item)
         {
             DoublyNode<T> current = new DoublyNode<T>();
             current = header;
@@ -41,7 +41,7 @@ namespace ad
         public void add(T item)
         {
             DoublyNode<T> newItem = new DoublyNode<T>(item);
-            
+
             if (header.next != null)
             {
                 newItem.next = header.next;
@@ -84,7 +84,7 @@ namespace ad
         /// </summary>
         /// <param name="findItem"></param>
         /// <returns></returns>
-        private DoublyNode<T> findPrevious(Object findItem)
+        public DoublyNode<T> findPrevious(Object findItem)
         {
             DoublyNode<T> current = header;
             while (!(current.next == null) && !(current.next.value.Equals(findItem)))

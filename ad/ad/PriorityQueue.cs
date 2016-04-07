@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ad
 {
-    // Bij onderstaande code is gebruik gemaakt van het boek en het github project van onderstaande link:
+    // Based on:
     // https://gist.github.com/ashish01/8593936
 
     /// <summary>
     /// Create a queue with items and their priority.
     /// </summary>
-    class PriorityQueue<T>
+  public  class PriorityQueue<T>
     {
-        internal class Node : IComparable<Node>
+       public class Node : IComparable<Node>
         {
             public int priority1;
             public T item1;
@@ -108,12 +109,16 @@ namespace ad
         /// <summary>
         /// Print a test line to the console output.
         /// </summary>
-        public void printArray()
+        public ArrayList getQueue()
         {
+
+            ArrayList newQueue = new ArrayList();
+            //add the items of queue to the arraylist newQueue.
             for (int i = 0; i < priorityList.Count; i++)
             {
-                Console.WriteLine("item: " + priorityList[i].item1 + " priority: " + priorityList[i].priority1);
+                newQueue.Add("item: " + priorityList[i].item1 + " priority: " + priorityList[i].priority1);
             }
+            return newQueue;
         }
     }
 }

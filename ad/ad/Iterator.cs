@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ad
 {
-    class Iterator<T> where T : IComparable
+    public class Iterator<T> where T : IComparable
     {
         LinkedList<T> list;
         private LNode<T> current;
@@ -61,7 +61,7 @@ namespace ad
         /// inserts the new item after the current node
         /// </summary>
         /// <param name="newItem"></param>
-        public void insterAfter(T newItem)
+        public void insertAfter(T newItem)
         {
             LNode<T> item = new LNode<T>(newItem);
             item.next = current.next;
@@ -92,6 +92,11 @@ namespace ad
         public bool end()
         {
             return (current == null);
+        }
+
+        public LinkedList<T> getIterator()
+        {
+            return list;
         }
     }
 }
