@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayList.cs" />
+    <Compile Include="BinarySearchTree.cs" />
     <Compile Include="BinaryTree.cs" />
     <Compile Include="BucketHash.cs" />
     <Compile Include="CircularyLinkedList.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="LinearHash.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="LNode.cs" />
+    <Compile Include="NodeBinTree.cs" />
     <Compile Include="PriorityQueue.cs" />
     <Compile Include="QuadraticHash.cs" />
     <Compile Include="Queue.cs" />
