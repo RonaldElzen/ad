@@ -8,18 +8,18 @@
         Title="DoublyLinkedList" Height="391.711" Width="612.348">
     <Grid HorizontalAlignment="Left" Height="343" VerticalAlignment="Top" Width="612" Margin="10,11,0,0">
         <ListBox x:Name="listBoxList" HorizontalAlignment="Left" Height="311" Margin="316,22,0,0" VerticalAlignment="Top" Width="244"/>
-        <TextBox x:Name="textBoxFind" HorizontalAlignment="Left" Height="23" Margin="161,138,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxFind" HorizontalAlignment="Left" Height="23" Margin="161,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="buttonFind" Content="Find" HorizontalAlignment="Left" Margin="60,141,0,0" VerticalAlignment="Top" Width="75" Click="buttonFind_Click"/>
-        <TextBox x:Name="textBoxInsert" HorizontalAlignment="Left" Height="23" Margin="161,259,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="textBoxInsert" HorizontalAlignment="Left" Height="23" Margin="161,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="buttonAdd" Content="Add" HorizontalAlignment="Left" Margin="59,220,0,0" VerticalAlignment="Top" Width="75" Click="buttonAdd_Click"/>
         <Button x:Name="buttonInsert" Content="Insert" HorizontalAlignment="Left" Margin="60,262,0,0" VerticalAlignment="Top" Width="75" Click="buttonInsert_Click"/>
-        <TextBox x:Name="textBoxAfter" HorizontalAlignment="Left" Height="23" Margin="241,259,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="textBoxAdd" HorizontalAlignment="Left" Height="23" Margin="161,217,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBoxDelete" HorizontalAlignment="Left" Height="23" Margin="161,299,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxAfter" HorizontalAlignment="Left" Height="23" Margin="241,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="textBoxAdd" HorizontalAlignment="Left" Height="23" Margin="161,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxDelete" HorizontalAlignment="Left" Height="23" Margin="161,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="buttonDelete" Content="Delete" HorizontalAlignment="Left" Margin="59,299,0,0" VerticalAlignment="Top" Width="76" Click="buttonDelete_Click"/>
         <Label x:Name="label" Content="Size" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top"/>
         <Button x:Name="buttonFindPrevious" Content="Find Previous" HorizontalAlignment="Left" Margin="60,181,0,0" VerticalAlignment="Top" Width="75" Click="buttonFindPrevious_Click"/>
-        <TextBox x:Name="textBoxFindPrevious" HorizontalAlignment="Left" Height="23" Margin="161,181,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxFindPrevious" HorizontalAlignment="Left" Height="23" Margin="161,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="labelSize" Content="Label" HorizontalAlignment="Left" Margin="85,22,0,0" VerticalAlignment="Top"/>
         <Button x:Name="buttonFindLast" Content="Find Last" HorizontalAlignment="Left" Margin="161,95,0,0" VerticalAlignment="Top" Width="75" Click="buttonFindLast_Click"/>
         <Button x:Name="buttonReverseList" Content="Reverse" HorizontalAlignment="Left" Margin="60,95,0,0" VerticalAlignment="Top" Width="75" Click="buttonReverseList_Click"/>

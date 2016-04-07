@@ -8,10 +8,10 @@
         Title="BucketHasWindow" Height="402.632" Width="300">
     <Grid>
         <ListBox x:Name="listBoxHash" HorizontalAlignment="Left" Height="243" VerticalAlignment="Top" Width="272" Margin="10,10,0,0"/>
-        <TextBox x:Name="TextboxAddHash" HorizontalAlignment="Left" Height="24" Margin="128,295,0,-50" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TextboxAddHash" HorizontalAlignment="Left" Height="24" Margin="128,295,0,-50" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextboxAddHash_TextChanged"/>
         <Button x:Name="buttonAddToHash" Content="Add" HorizontalAlignment="Left" Margin="34,295,0,-50" VerticalAlignment="Top" Width="76" Click="buttonAddToHash_Click" Height="24"/>
         <Button x:Name="buttonRemoveFromHash" Content="Remove" HorizontalAlignment="Left" Margin="34,324,0,-79" VerticalAlignment="Top" Width="76" Height="24" Click="buttonRemoveFromHash_Click"/>
-        <TextBox x:Name="textBoxRemoveHash" HorizontalAlignment="Left" Height="24" Margin="128,324,0,-79" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxRemoveHash" HorizontalAlignment="Left" Height="24" Margin="128,324,0,-79" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

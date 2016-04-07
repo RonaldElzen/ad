@@ -64,5 +64,10 @@ namespace Eindopdracht
 
             }
         }
+
+        private void TextboxAddHash_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

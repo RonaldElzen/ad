@@ -351,6 +351,7 @@ namespace Eindopdracht
             var circulairWindow = new CircularyListWindow();
             circulairWindow.Show();
         }
+        
     }
 }
 
