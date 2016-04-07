@@ -55,3 +55,4 @@ C:\Users\Wouter Brink\Documents\GitHub\ad\Eindopdracht\Eindopdracht\obj\Release\
 C:\Users\Wouter Brink\Documents\GitHub\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.g.resources
 C:\Users\Wouter Brink\Documents\GitHub\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.Properties.Resources.resources
 C:\Users\Wouter Brink\Documents\GitHub\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.csproj.GenerateResource.Cache
+C:\Users\Wouter Brink\Documents\GitHub\ad\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.csprojResolveAssemblyReference.cache
