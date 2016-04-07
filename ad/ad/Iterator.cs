@@ -46,7 +46,9 @@ namespace ad
             LNode<T> item = new LNode<T>(newItem);
             if (current == list.getHeader())
             {
-                
+                item.next = current.next;
+                current.next = item;
+                current = item;
             }
             else
             {
