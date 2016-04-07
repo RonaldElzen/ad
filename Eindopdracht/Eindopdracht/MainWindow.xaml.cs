@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ad;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Eindopdracht
 {
 
@@ -22,19 +24,21 @@ namespace Eindopdracht
     /// </summary>
     public partial class MainWindow : Window
     {
-       
-        //int[] testArray = new int[10] { 10, 15, 1, 2, 3, 5, 18, 19, 20, 21 };
+         ad.LinkedList<string> Iter = new ad.LinkedList<string>();
+         ad.ArrayList<string> arrList = new ad.ArrayList<string>();
+         ad.Iterator<string> iterator;
+         ad.Stack<String> stack = new ad.Stack<string>();
+         ad.Queue<String> queue = new ad.Queue<string>();
         int[] randomIntArray;
-        //Queue queue = new Queue();
-        public ArrayList queue;
-        public ArrayList stack;
+
         public int stackIndex = -1;
         Timing timing = new Timing();
         public MainWindow()
         {
+            iterator = new ad.Iterator<string>(Iter);
+
             InitializeComponent();
-            queue = new ArrayList();
-            stack = new ArrayList();
+
         }
 
         public void sort(string sortingMethod)
@@ -46,7 +50,7 @@ namespace Eindopdracht
             if (Int32.Parse(textBoxArraySize.Text) > 0)
             {
                 int size = Int32.Parse(textBoxArraySize.Text);
-                
+
                 randomIntArray = new int[size];
 
                 Random rnd = new Random();
@@ -77,14 +81,14 @@ namespace Eindopdracht
                 labelTime.Content = result.Time.ToString();
 
 
-            
+
                 textBoxArr.Clear();
                 for (int i = 0; i < randomIntArray.Length; i++)
                 {
 
                     textBoxNew.Text += randomIntArray[i] + " ";
                     textBoxArr.Text += randomIntArray[i] + " ";
-         
+
 
 
                 }
@@ -120,64 +124,232 @@ namespace Eindopdracht
         {
             int result;
             int key = int.Parse(textBoxSearch.Text);
-            int max = int.Parse(textBoxArraySize.Text);
-            result =  Search.binarySearch(randomIntArray, key, 0, max);
-            MessageBox.Show(result.ToString()); 
+             
+            int maxSize = int.Parse(textBoxArraySize.Text);
+            result = Search.binarySearch(randomIntArray, key, 0, maxSize);
+            int max = Search.highestValue(randomIntArray);
+            int min = Search.lowestValue(randomIntArray);
+            MessageBox.Show("Found at " + result.ToString() + "  Highest value: " + max + " Lowest value " + min);
         }
 
-        private void btnSearchSequential_Click(object sender, RoutedEventArgs e)
+        private void buttonSequential_Click(object sender, RoutedEventArgs e)
         {
+
             int result;
             int key = int.Parse(textBoxSearch.Text);
-            int max = int.Parse(textBoxArraySize.Text);
+            int maxSize = int.Parse(textBoxArraySize.Text);
             result = Search.sequentialSearch(randomIntArray, key);
-            MessageBox.Show(result.ToString());
+            int max = Search.highestValue(randomIntArray);
+            int min = Search.lowestValue(randomIntArray);
+            MessageBox.Show("Found at " + result.ToString() +  "  Highest value: " + max + " Lowest value " + min);
         }
 
         private void buttonEnqueue_Click(object sender, RoutedEventArgs e)
         {
-    
-            Queue.enqueue(textBoxQueue.Text, queue);
+           
+            queue.enqueue(textBoxQueue.Text);
             updateQueue();
         }
 
         private void updateQueue()
         {
+            ArrayList arrList;
+            arrList = queue.getQueue();
+
             textBoxShowQueue.Clear();
-            for (int i = 0; i < queue.Count; i++)
+            for (int i = 0; i < arrList.Count; i++)
             {
-                textBoxShowQueue.Text += queue[i] + "\r\n";
+                textBoxShowQueue.Text += arrList[i] + "\r\n";
             }
         }
 
         private void updateStack()
         {
+            ArrayList arrList;
+            arrList = stack.getStack();
             textBoxShowStack.Clear();
-            for (int i = 0; i < stack.Count; i++)
+            for (int i = 0; i < arrList.Count; i++)
             {
-                textBoxShowStack.Text += stack[i] + "\r\n";
+                textBoxShowStack.Text += arrList[i] + "\r\n";
             }
         }
 
 
         private void buttonDequeue_Click(object sender, RoutedEventArgs e)
         {
-            Queue.dequeue(queue);
+            queue.dequeue();
             updateQueue();
         }
 
         private void buttonPush_Click(object sender, RoutedEventArgs e)
         {
-            Stack.push(textBoxStack.Text, stackIndex, stack);
+            stack.push(textBoxStack.Text, stackIndex);
             updateStack();
             stackIndex++;
         }
 
         private void buttonPop_Click(object sender, RoutedEventArgs e)
         {
-            Stack.pop(stackIndex, stack);
+            stack.pop(stackIndex);
             updateStack();
             stackIndex--;
+        }
+
+        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void buttonCreateHash_Click(object sender, RoutedEventArgs e)
+        {
+
+            var bucketWindow = new BucketHasWindow(int.Parse(textBoxHashSize.Text));
+            bucketWindow.Show();
+        }
+
+
+
+        private void buttonLinearHash_Click(object sender, RoutedEventArgs e)
+        {
+            ad.LinearHash linearHash = new ad.LinearHash(int.Parse(textBoxHashSize.Text));
+            var linearWindow = new LinearHashWindow(linearHash);
+            linearWindow.Show();
+       
+        }
+
+        private void buttonQuadraticHash_Click(object sender, RoutedEventArgs e)
+        {
+            ad.QuadraticHash<string> quadraticHash = new ad.QuadraticHash<string>(int.Parse(textBoxHashSize.Text));
+            var quadraticWindow = new QuadraticHashWindow(quadraticHash);
+            quadraticWindow.Show();
+        }
+
+        private void buttonLinkedList_Click(object sender, RoutedEventArgs e)
+        {
+            LinkedListWindow linkedWindow = new LinkedListWindow();
+            linkedWindow.Show();
+        }
+
+
+       private void updateArrayList()
+        {
+            string[] arrayList;
+            listBoxArrayList.Items.Clear();
+            arrayList = arrList.getArrayList();
+            labelArrayLength.Content = arrList.Length();
+            foreach (string value in arrayList)
+            {
+                listBoxArrayList.Items.Add(value);
+            }
+        }
+
+        private void buttonAddArr_Click(object sender, RoutedEventArgs e)
+        {
+            arrList.Add(textBoxArrayItem.Text);
+            updateArrayList();
+
+        }
+
+        private void buttonArrRemove_Click(object sender, RoutedEventArgs e)
+        {
+            arrList.Remove(textBoxArrayItem.Text);
+            updateArrayList();
+        }
+
+        private void buttonClearArray_Click(object sender, RoutedEventArgs e)
+        {
+            arrList.Clear();
+            updateArrayList();
+        }
+
+        private void buttonGetItem_Click(object sender, RoutedEventArgs e)
+        {
+          string result =  arrList.Get(int.Parse(textBoxGetItem.Text));
+            MessageBox.Show(result);
+        }
+
+        private void buttonContains_Click(object sender, RoutedEventArgs e)
+        {
+            int index;
+            bool contains = arrList.Contains(textBoxContains.Text);
+            if (contains)
+            {
+                index = arrList.IndexOf(textBoxContains.Text);
+                MessageBox.Show(textBoxContains.Text + " Found at: " + index);
+            }
+            else
+            {
+                MessageBox.Show(textBoxContains.Text + " Not found in Array");
+            }
+            
+        }
+
+        private void buttonDoublyList_Click(object sender, RoutedEventArgs e)
+        {
+          var  doublyList = new DoublyLinkedList();
+            doublyList.Show();
+        }
+
+
+        private void buttonNextIt_Click(object sender, RoutedEventArgs e)
+        {
+            ad.LNode<string> lNode = new LNode<string>();
+            lNode = iterator.getCurrent();
+            iterator.next();
+            string val = lNode.getValue();
+            labelNextIt.Content = val;
+        }
+
+        private void buttonInsertAfter_Click(object sender, RoutedEventArgs e)
+        {
+            iterator.insertAfter(textBoxValueIt.Text);
+        }
+
+        private void buttonInsertBefore_Click(object sender, RoutedEventArgs e)
+        {
+            iterator.insertBefore(textBoxValueIt.Text);
+        }
+
+        private void buttonCurrentIt_Click(object sender, RoutedEventArgs e)
+        {
+            ad.LNode<string> lNode = new LNode<string>();
+            lNode = iterator.getCurrent();
+            string val = lNode.getValue();
+            MessageBox.Show(val);
+        }
+
+        private void buttonRemoveIt_Click(object sender, RoutedEventArgs e)
+        {
+            iterator.remove();
+        }
+
+        private void buttonClearIt_Click(object sender, RoutedEventArgs e)
+        {
+            iterator.clear();
+        }
+        
+        public void updateIterator()
+        {
+            ad.LinkedList<string> list;
+            list = iterator.getIterator();
+            string[] data = list.getList();
+
+            foreach(string val in data)
+            {
+                listBoxIterator.Items.Add(val);
+            }
+        }
+
+        private void buttonPriorityQueue_Click(object sender, RoutedEventArgs e)
+        {
+            var pQueueWindow = new PriorityQueueWindow();
+            pQueueWindow.Show();
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            var circulairWindow = new CircularyListWindow();
+            circulairWindow.Show();
         }
     }
 }

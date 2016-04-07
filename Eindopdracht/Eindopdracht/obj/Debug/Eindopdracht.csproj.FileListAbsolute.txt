@@ -12,3 +12,50 @@ D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\Eindopdr
 D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
 D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb
 D:\School\Stenden\Jaar 2\Algoritmen\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csprojResolveAssemblyReference.cache
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe.config
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csprojResolveAssemblyReference.cache
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\MainWindow.g.cs
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\App.g.cs
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht_MarkupCompile.cache
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht_MarkupCompile.lref
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.pdb
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\bin\Debug\ad.dll
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\MainWindow.baml
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.g.resources
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\BucketHasWindow.g.cs
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\BucketHasWindow.baml
+D:\School\Stenden\Jaar 2\Algoritmen\Git\ad\Eindopdracht\Eindopdracht\obj\Debug\LinearHashWindow.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe.config
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.pdb
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\bin\Debug\ad.dll
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csprojResolveAssemblyReference.cache
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\BucketHasWindow.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\LinearHashWindow.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\MainWindow.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\App.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht_MarkupCompile.cache
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht_MarkupCompile.lref
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\BucketHasWindow.baml
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\LinearHashWindow.baml
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\MainWindow.baml
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.g.resources
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\LinkedListWindow.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\LinkedListWindow.baml
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\DoublyLinkedList.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\DoublyLinkedList.baml
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\PriorityQueueWindow.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\PriorityQueueWindow.baml
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\QuadraticHashWindow.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\QuadraticHashWindow.baml
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\CircularyListWindow.g.cs
+C:\Users\ronal\Desktop\Eindopdracht\Eindopdracht\obj\Debug\CircularyListWindow.baml

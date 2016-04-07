@@ -38,6 +38,10 @@
     <StartupObject>Eindopdracht.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ad.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -58,12 +62,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Queue.cs" />
-    <Compile Include="Search.cs" />
-    <Compile Include="Sort.cs" />
-    <Compile Include="Stack.cs" />
-    <Compile Include="Swap.cs" />
-    <Compile Include="Timing.cs" />
+    <Compile Include="CircularyListWindow.xaml.cs">
+      <DependentUpon>CircularyListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuadraticHashWindow.xaml.cs">
+      <DependentUpon>QuadraticHashWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BucketHasWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CircularyListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DoublyLinkedList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LinearHashWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LinkedListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,12 +96,35 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BucketHasWindow.xaml.cs">
+      <DependentUpon>BucketHasWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DoublyLinkedList.xaml.cs">
+      <DependentUpon>DoublyLinkedList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LinearHashWindow.xaml.cs">
+      <DependentUpon>LinearHashWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LinkedListWindow.xaml.cs">
+      <DependentUpon>LinkedListWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PriorityQueueWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuadraticHashWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PriorityQueueWindow.xaml.cs">
+      <DependentUpon>PriorityQueueWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
