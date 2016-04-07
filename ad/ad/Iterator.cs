@@ -44,9 +44,17 @@ namespace ad
         public void insertBefore(T newItem)
         {
             LNode<T> item = new LNode<T>(newItem);
-            item.next = prev.next;
-            prev.next = item;
-            current = item;
+            if (current == list.getHeader())
+            {
+                
+            }
+            else
+            {
+                item.next = prev.next;
+                prev.next = item;
+                current = item;
+            }
+            
         }
 
         /// <summary>
