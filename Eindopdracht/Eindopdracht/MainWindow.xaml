@@ -34,7 +34,7 @@
             </TabItem>
             <TabItem Header="Search">
                 <Grid Background="#FFE5E5E5">
-                    <TextBox x:Name="textBoxSearch" HorizontalAlignment="Left" Height="24" Margin="195,266,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBoxSearch" HorizontalAlignment="Left" Height="24" Margin="195,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <Button x:Name="btnSearchBinary" Content="Binary Search" HorizontalAlignment="Left" Margin="195,306,0,0" VerticalAlignment="Top" Width="103" Click="btnSearchBinary_Click"/>
                     <TextBox x:Name="textBoxArr" HorizontalAlignment="Left" Height="208" Margin="185,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
                     <Button x:Name="buttonSequential" Content="Sequential search" HorizontalAlignment="Left" Margin="195,331,0,0" VerticalAlignment="Top" Width="103" Click="buttonSequential_Click"/>
@@ -46,9 +46,9 @@
             </TabItem>
             <TabItem Header="Queue">
                 <Grid Background="#FFE5E5E5" Margin="0,1,2,1">
-                    <TextBox x:Name="textBoxQueue" HorizontalAlignment="Left" Height="22" Margin="88,21,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="122"/>
+                    <TextBox x:Name="textBoxQueue" HorizontalAlignment="Left" Margin="88,21,0,327" TextWrapping="Wrap" Width="122"/>
                     <Label x:Name="label2" Content="Label" HorizontalAlignment="Left" Margin="22,21,0,0" VerticalAlignment="Top" Width="38"/>
-                    <TextBox x:Name="textBoxShowQueue" HorizontalAlignment="Left" Height="281" Margin="252,21,0,-126" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="242"/>
+                    <TextBox x:Name="textBoxShowQueue" HorizontalAlignment="Left" Height="281" Margin="252,21,0,-126" TextWrapping="Wrap" VerticalAlignment="Top" Width="242"/>
                     <Button x:Name="buttonEnqueue" Content="Enqueue" HorizontalAlignment="Left" Margin="40,146,0,0" VerticalAlignment="Top" Width="76" Click="buttonEnqueue_Click"/>
                     <Button x:Name="buttonDequeue" Content="Dequeue" HorizontalAlignment="Left" Margin="134,146,0,0" VerticalAlignment="Top" Width="76" Click="buttonDequeue_Click"/>
                     <Button x:Name="buttonPriorityQueue" Content="Priority Queue" HorizontalAlignment="Left" Margin="40,282,0,0" VerticalAlignment="Top" Width="142" Height="64" Click="buttonPriorityQueue_Click"/>
@@ -56,9 +56,9 @@
             </TabItem>
             <TabItem Header="Stack">
                 <Grid Background="#FFE5E5E5" Margin="0,1,2,1">
-                    <TextBox x:Name="textBoxStack" HorizontalAlignment="Left" Height="22" Margin="122,22,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBoxStack" HorizontalAlignment="Left" Height="22" Margin="122,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <Label x:Name="label3" Content="Label" HorizontalAlignment="Left" Margin="58,22,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBoxShowStack" HorizontalAlignment="Left" Height="232" Margin="266,22,0,-78" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="238"/>
+                    <TextBox x:Name="textBoxShowStack" HorizontalAlignment="Left" Height="232" Margin="266,22,0,-78" TextWrapping="Wrap" VerticalAlignment="Top" Width="238"/>
                     <Button x:Name="buttonPush" Content="Push" HorizontalAlignment="Left" Margin="74,146,0,0" VerticalAlignment="Top" Width="74" Click="buttonPush_Click"/>
                     <Button x:Name="buttonPop" Content="POP" HorizontalAlignment="Left" Margin="168,146,0,0" VerticalAlignment="Top" Width="74" Click="buttonPop_Click"/>
                 </Grid>
@@ -81,15 +81,19 @@
             </TabItem>
             <TabItem Header="ArrayList">
                 <Grid Background="#FFE5E5E5" Margin="0,1,2,1">
-                    <Button x:Name="buttonClearArray" Content="Clear" HorizontalAlignment="Left" Margin="283,254,0,0" VerticalAlignment="Top" Width="75" Click="buttonClearArray_Click"/>
-                    <TextBox x:Name="textBoxContains" HorizontalAlignment="Left" Height="23" Margin="114,148,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                    <TextBox x:Name="textBoxGetItem" HorizontalAlignment="Left" Height="23" Margin="114,108,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40*"/>
+                        <ColumnDefinition Width="59*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="buttonClearArray" Content="Clear" HorizontalAlignment="Left" Margin="42.652,254,0,0" VerticalAlignment="Top" Width="75" Click="buttonClearArray_Click" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxContains" HorizontalAlignment="Left" Height="23" Margin="114,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBoxGetItem" HorizontalAlignment="Left" Height="23" Margin="114,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <Button x:Name="buttonGetItem" Content="Get Item" HorizontalAlignment="Left" Margin="3,112,0,0" VerticalAlignment="Top" Width="75" Click="buttonGetItem_Click"/>
                     <Button x:Name="buttonContains" Content="Contains" HorizontalAlignment="Left" Margin="3,151,0,0" VerticalAlignment="Top" Width="75" Click="buttonContains_Click"/>
                     <Button x:Name="buttonAddArr" Content="Add" HorizontalAlignment="Left" Margin="3,234,0,0" VerticalAlignment="Top" Width="75" Click="buttonAddArr_Click"/>
-                    <TextBox x:Name="textBoxArrayItem" HorizontalAlignment="Left" Height="23" Margin="3,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="231"/>
+                    <TextBox x:Name="textBoxArrayItem" HorizontalAlignment="Left" Height="23" Margin="3,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231"/>
                     <Button x:Name="buttonArrRemove" Content="Remove" HorizontalAlignment="Left" Margin="159,234,0,0" VerticalAlignment="Top" Width="75" Click="buttonArrRemove_Click"/>
-                    <ListBox x:Name="listBoxArrayList" HorizontalAlignment="Left" Height="230" Margin="283,10,0,0" VerticalAlignment="Top" Width="302"/>
+                    <ListBox x:Name="listBoxArrayList" HorizontalAlignment="Left" Height="230" Margin="42.652,10,0,0" VerticalAlignment="Top" Width="302" Grid.Column="1"/>
                     <Label x:Name="labelArrayLength" Content="Label" HorizontalAlignment="Left" Margin="92,75,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="label5" Content="Length" HorizontalAlignment="Left" Margin="40,75,0,0" VerticalAlignment="Top"/>
                 </Grid>
@@ -99,7 +103,7 @@
                     <ListBox x:Name="listBoxIterator" HorizontalAlignment="Left" Height="303" Margin="316,32,0,0" VerticalAlignment="Top" Width="236"/>
                     <Button x:Name="buttonNextIt" Content="Next" HorizontalAlignment="Left" Margin="79,32,0,0" VerticalAlignment="Top" Width="75" Click="buttonNextIt_Click"/>
                     <Label x:Name="labelNextIt" Content="Label" HorizontalAlignment="Left" Margin="171,29,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.447,-0.5"/>
-                    <TextBox x:Name="textBoxValueIt" HorizontalAlignment="Left" Height="23" Margin="79,91,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="157"/>
+                    <TextBox x:Name="textBoxValueIt" HorizontalAlignment="Left" Height="23" Margin="79,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
                     <Button x:Name="buttonInsertBefore" Content="Insert before" HorizontalAlignment="Left" Margin="79,135,0,0" VerticalAlignment="Top" Width="75" Click="buttonInsertBefore_Click"/>
                     <Button x:Name="buttonInsertAfter" Content="Insert after" HorizontalAlignment="Left" Margin="161,135,0,0" VerticalAlignment="Top" Width="75" Click="buttonInsertAfter_Click"/>
                     <Button x:Name="buttonRemoveIt" Content="Remove" HorizontalAlignment="Left" Margin="79,228,0,0" VerticalAlignment="Top" Width="75" Click="buttonRemoveIt_Click"/>
