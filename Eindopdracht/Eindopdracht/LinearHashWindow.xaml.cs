@@ -21,9 +21,9 @@ namespace Eindopdracht
     /// </summary>
     public partial class LinearHashWindow : Window
     {
-        ad.LinearHash linearHash;
+        ad.LinearHash<string> linearHash;
 
-        public LinearHashWindow(ad.LinearHash linearHash)
+        public LinearHashWindow(ad.LinearHash<string> linearHash)
         {
             this.linearHash = linearHash;
             InitializeComponent();

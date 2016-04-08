@@ -29,7 +29,7 @@ namespace Eindopdracht
          ad.Iterator<string> iterator;
          ad.Stack<String> stack = new ad.Stack<string>();
          ad.Queue<String> queue = new ad.Queue<string>();
-         
+        ad.BinarySearchTree<String> bst = new ad.BinarySearchTree<String>();
 
         int[] randomIntArray;
 
@@ -236,7 +236,7 @@ namespace Eindopdracht
 
         private void buttonLinearHash_Click(object sender, RoutedEventArgs e)
         {
-            ad.LinearHash linearHash = new ad.LinearHash(int.Parse(textBoxHashSize.Text));
+            ad.LinearHash<string> linearHash = new ad.LinearHash<string>(int.Parse(textBoxHashSize.Text));
             var linearWindow = new LinearHashWindow(linearHash);
             linearWindow.Show();
        
@@ -376,7 +376,28 @@ namespace Eindopdracht
             var circulairWindow = new CircularyListWindow();
             circulairWindow.Show();
         }
-        
+
+        private void buttonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            bst.add(textBoxAdd.Text);
+        }
+
+        private void buttonGetRoot_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MessageBox.Show(bst.getRoot().getValue().ToString());
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Nothing in array");
+            }
+        }
+
+        private void buttonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            bst.Delete(textBoxDelete.Text);
+        }
     }
 }
 

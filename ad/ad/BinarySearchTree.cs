@@ -138,6 +138,10 @@ namespace ad
             NodeBinTree<T> parent = rootNode;
             bool isLeftChild = true;
 
+            if (current == null || current.getValue() == null)
+            {
+                return false;
+            }
             // loop to find the right node to delete
             while (current.getValue().CompareTo(key) != 0)
             {

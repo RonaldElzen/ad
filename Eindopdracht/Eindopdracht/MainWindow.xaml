@@ -116,9 +116,9 @@
             <TabItem Header="BinarySearchTree">
                 <Grid Background="#FFE5E5E5" Margin="0,-1,1.667,3">
                     <ListBox x:Name="bstListBox" HorizontalAlignment="Left" Height="303" Margin="316,32,0,0" VerticalAlignment="Top" Width="236"/>
-                    <Button x:Name="buttonGetRoot" Content="Get root" HorizontalAlignment="Left" Margin="43,140,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="buttonAdd" Content="Add" HorizontalAlignment="Left" Margin="43,62,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="buttonDelete" Content="Delete" HorizontalAlignment="Left" Margin="43,90,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="buttonGetRoot" Content="Get root" HorizontalAlignment="Left" Margin="43,140,0,0" VerticalAlignment="Top" Width="75" Click="buttonGetRoot_Click"/>
+                    <Button x:Name="buttonAdd" Content="Add" HorizontalAlignment="Left" Margin="43,62,0,0" VerticalAlignment="Top" Width="75" Click="buttonAdd_Click"/>
+                    <Button x:Name="buttonDelete" Content="Delete" HorizontalAlignment="Left" Margin="43,90,0,0" VerticalAlignment="Top" Width="75" Click="buttonDelete_Click"/>
                     <Button x:Name="buttonSearch" Content="Search" HorizontalAlignment="Left" Margin="43,115,0,0" VerticalAlignment="Top" Width="75"/>
                     <Button x:Name="buttonInOrder" Content="getInOrder" HorizontalAlignment="Left" Margin="43,165,0,0" VerticalAlignment="Top" Width="75"/>
                     <Button x:Name="buttonPreOrder" Content="getPreOrder" HorizontalAlignment="Left" Margin="43,190,0,0" VerticalAlignment="Top" Width="75"/>
