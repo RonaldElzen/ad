@@ -29,6 +29,8 @@ namespace Eindopdracht
          ad.Iterator<string> iterator;
          ad.Stack<String> stack = new ad.Stack<string>();
          ad.Queue<String> queue = new ad.Queue<string>();
+         
+
         int[] randomIntArray;
 
         public int stackIndex = -1;
@@ -45,7 +47,6 @@ namespace Eindopdracht
         {
             var timeUnit = Timing.TimeUnit.Miliseconds;
             Timing.Result<Timing.NoReturn> result = null;
-
 
             if (Int32.Parse(textBoxArraySize.Text) > 0)
             {
@@ -122,26 +123,50 @@ namespace Eindopdracht
 
         private void btnSearchBinary_Click(object sender, RoutedEventArgs e)
         {
+
+            var timeUnit = Timing.TimeUnit.Miliseconds;
+            Timing.Result<int> timeResult = null;
+
             int result;
             int key = int.Parse(textBoxSearch.Text);
-             
             int maxSize = int.Parse(textBoxArraySize.Text);
+
+            Timing timing = new Timing();
+
             result = Search.binarySearch(randomIntArray, key, 0, maxSize);
             int max = Search.highestValue(randomIntArray);
             int min = Search.lowestValue(randomIntArray);
-            MessageBox.Show("Found at " + result.ToString() + "  Highest value: " + max + " Lowest value " + min);
+
+            timeResult = Timing.GetTime(() => Search.binarySearch(randomIntArray, key, 0, maxSize), timeUnit);
+
+            labelMin.Content = min.ToString();
+            labelMax.Content = max.ToString();
+            label8.Content = timeResult.Time.ToString();
+            MessageBox.Show("Found at " + result.ToString() + "  Highest value: " + max + " Lowest value " + min + "\r\n At a time of " + timeResult.Time.ToString());
         }
 
         private void buttonSequential_Click(object sender, RoutedEventArgs e)
         {
+            var timeUnit = Timing.TimeUnit.Miliseconds;
+            Timing.Result<int> timeResult = null;
 
             int result;
             int key = int.Parse(textBoxSearch.Text);
             int maxSize = int.Parse(textBoxArraySize.Text);
+            
             result = Search.sequentialSearch(randomIntArray, key);
             int max = Search.highestValue(randomIntArray);
             int min = Search.lowestValue(randomIntArray);
-            MessageBox.Show("Found at " + result.ToString() +  "  Highest value: " + max + " Lowest value " + min);
+
+            timeResult = Timing.GetTime(() => Search.binarySearch(randomIntArray, key, 0, maxSize), timeUnit);
+
+
+            labelMin.Content = min.ToString();
+            labelMax.Content = max.ToString();
+            label8.Content = timeResult.Time.ToString();
+            MessageBox.Show("Found at " + result.ToString() +  "  Highest value: " + max + " Lowest value " + min + "\r\n At a time of " + timeResult.Time.ToString());
+
+
         }
 
         private void buttonEnqueue_Click(object sender, RoutedEventArgs e)

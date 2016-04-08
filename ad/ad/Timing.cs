@@ -83,7 +83,7 @@ namespace ad
             public double Time { get; set; }
         }
 
-        private double Duration(TimeUnit timeUnit)
+        public double Duration(TimeUnit timeUnit)
         {
             return (((double)(stopTime - startTime) / ((double)frequency) * (int)timeUnit));
         }

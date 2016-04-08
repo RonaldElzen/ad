@@ -10,21 +10,15 @@ namespace ad
     public class Stack<T>
     {
         ArrayList stack = new ArrayList();
-        T[] teststack;
         int count = 0;
 
         public Stack()
         {
-            teststack = new T[1]; // size given as parameter not done
+            
         }
 
-        public void push<T>(T item, int index) where T : IComparable<T> // waarom IComparable? en index?
+        public void push<T>(T item, int index) where T : IComparable<T> 
         {
-            /*if (count + 1 >= teststack.Length)
-            {
-                Array.Resize(ref teststack, (teststack.Length + 1) * 2);
-            }
-            count++;*/
             stack.Add(item);
             index = index + 1;
         }

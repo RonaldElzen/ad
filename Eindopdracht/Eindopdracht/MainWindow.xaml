@@ -42,6 +42,8 @@
                     <Label x:Name="label7" Content="Max" HorizontalAlignment="Left" Margin="474,59,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="labelMin" Content="Label" HorizontalAlignment="Left" Margin="539,28,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="labelMax" Content="Label" HorizontalAlignment="Left" Margin="539,59,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label8" Content="Label" HorizontalAlignment="Left" Margin="539,90,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label9" Content="Time" HorizontalAlignment="Left" Margin="469,90,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Queue">
@@ -109,6 +111,23 @@
                     <Button x:Name="buttonRemoveIt" Content="Remove" HorizontalAlignment="Left" Margin="79,228,0,0" VerticalAlignment="Top" Width="75" Click="buttonRemoveIt_Click"/>
                     <Button x:Name="buttonClearIt" Content="Clear" HorizontalAlignment="Left" Margin="79,253,0,0" VerticalAlignment="Top" Width="75" Click="buttonClearIt_Click"/>
                     <Button x:Name="buttonCurrentIt" Content="Current" HorizontalAlignment="Left" Margin="79,203,0,0" VerticalAlignment="Top" Width="75" Click="buttonCurrentIt_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="BinarySearchTree">
+                <Grid Background="#FFE5E5E5" Margin="0,-1,1.667,3">
+                    <ListBox x:Name="bstListBox" HorizontalAlignment="Left" Height="303" Margin="316,32,0,0" VerticalAlignment="Top" Width="236"/>
+                    <Button x:Name="buttonGetRoot" Content="Get root" HorizontalAlignment="Left" Margin="43,140,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="buttonAdd" Content="Add" HorizontalAlignment="Left" Margin="43,62,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="buttonDelete" Content="Delete" HorizontalAlignment="Left" Margin="43,90,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="buttonSearch" Content="Search" HorizontalAlignment="Left" Margin="43,115,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="buttonInOrder" Content="getInOrder" HorizontalAlignment="Left" Margin="43,165,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="buttonPreOrder" Content="getPreOrder" HorizontalAlignment="Left" Margin="43,190,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="buttonPostOrder" Content="getPostOrder" HorizontalAlignment="Left" Margin="43,218,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="buttonFindMin" Content="Find min" HorizontalAlignment="Left" Margin="43,247,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="buttonFindMax" Content="Find max" HorizontalAlignment="Left" Margin="43,275,0,0" VerticalAlignment="Top" Width="75"/>
+                    <TextBox x:Name="textBoxAdd" HorizontalAlignment="Left" Height="23" Margin="141,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBoxDelete" HorizontalAlignment="Left" Height="23" Margin="141,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBoxS" HorizontalAlignment="Left" Height="23" Margin="141,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                 </Grid>
             </TabItem>
         </TabControl>
