@@ -26,35 +26,49 @@ namespace Eindopdracht
             InitializeComponent();
         }
 
+        /// <summary>
+        /// adds new value to the QuadraticHash
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAddToHash_Click(object sender, RoutedEventArgs e)
         {
             quadraticHash.insert(TextboxAddHash.Text);
-            Show();
+            show();
         }
 
+        /// <summary>
+        /// Removes item with the value of the textbox from the quadratic hash
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonRemoveFromHash_Click(object sender, RoutedEventArgs e)
         {
-            quadraticHash.remove(int.Parse(textBoxRemoveHash.Text));
-            Show();
+            try
+            {
+                quadraticHash.remove(int.Parse(textBoxRemoveHash.Text));
+                show();
+            }
+            catch
+            {
+                MessageBox.Show("input invalid");
+            }
         }
 
+        /// <summary>
+        /// updates the listbox with the new QuadraticHash item values
+        /// </summary>
         private void show()
         {
             listBoxHash.Items.Clear();
             string[] hash = quadraticHash.getArray();
             for (int i = 0; i <= hash.GetUpperBound(0); i++)
             {
-
-
-
                 if (hash[i] != null)
                 {
                     listBoxHash.Items.Add("Key " + i + " Value " + hash[i]);
                 }
-
             }
         }
-
-
     }
 }

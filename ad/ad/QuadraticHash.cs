@@ -133,7 +133,7 @@ public class QuadraticHash<T>
         /// <param name="key">The key of the value to remove.</param>
         public void remove(int key)
         {
-            if (key > 0 && key <= QhashArray.GetUpperBound(0))
+            if (key >= 0 && key <= QhashArray.GetUpperBound(0))
             {
                 if (QhashArray[key] != null)
                 {

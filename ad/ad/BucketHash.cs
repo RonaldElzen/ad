@@ -54,8 +54,7 @@ namespace ad
             char[] charray;
 
             //Make item a string and make a chararray
-            //NEEDS TO BE CHECKED
-
+            
             charray = item.ToString().ToCharArray();
             for (int i = 0; i < item.ToString().Length - 1; i++)
             {

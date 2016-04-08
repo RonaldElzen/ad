@@ -30,22 +30,33 @@ namespace Eindopdracht
             InitializeComponent();
         }
 
+        /// <summary>
+        /// When button is clicked, the value of the textbox is added to the BucketHash
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAddToHash_Click(object sender, RoutedEventArgs e)
         {
-
             bucketHash.Insert(TextboxAddHash.Text);
             show();
         }
 
-
-
-
+        /// <summary>
+        /// When button is clicked, the value of the textbox is removed to the BucketHash
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonRemoveFromHash_Click(object sender, RoutedEventArgs e)
         {
             bucketHash.Remove(textBoxRemoveHash.Text);
             show();
         }
 
+        /// <summary>
+        /// When button is clicked, show the BucketHash in the listBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void show()
         {
             listBoxHash.Items.Clear();

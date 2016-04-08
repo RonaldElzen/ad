@@ -28,7 +28,10 @@ namespace ad
         /// </summary>
         public void dequeue()
         {
-            queue.RemoveAt(0);
+            if (queue.Count > 0)
+            {
+                queue.RemoveAt(0);
+            }
         }
 
         /// <summary>
@@ -37,7 +40,11 @@ namespace ad
         /// <returns>the object at the beginning of the queue</returns>
         public object Peek()
         {
-            return queue[0];
+            if (queue.Count > 0)
+            {
+                return queue[0];
+            }
+            return "no value";
         }
 
         /// <summary>

@@ -119,12 +119,12 @@
                     <Button x:Name="buttonGetRoot" Content="Get root" HorizontalAlignment="Left" Margin="43,140,0,0" VerticalAlignment="Top" Width="75" Click="buttonGetRoot_Click"/>
                     <Button x:Name="buttonAdd" Content="Add" HorizontalAlignment="Left" Margin="43,62,0,0" VerticalAlignment="Top" Width="75" Click="buttonAdd_Click"/>
                     <Button x:Name="buttonDelete" Content="Delete" HorizontalAlignment="Left" Margin="43,90,0,0" VerticalAlignment="Top" Width="75" Click="buttonDelete_Click"/>
-                    <Button x:Name="buttonSearch" Content="Search" HorizontalAlignment="Left" Margin="43,115,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="buttonInOrder" Content="getInOrder" HorizontalAlignment="Left" Margin="43,165,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="buttonPreOrder" Content="getPreOrder" HorizontalAlignment="Left" Margin="43,190,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="buttonPostOrder" Content="getPostOrder" HorizontalAlignment="Left" Margin="43,218,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="buttonFindMin" Content="Find min" HorizontalAlignment="Left" Margin="43,247,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="buttonFindMax" Content="Find max" HorizontalAlignment="Left" Margin="43,275,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="buttonSearch" Content="Search" HorizontalAlignment="Left" Margin="43,115,0,0" VerticalAlignment="Top" Width="75" Click="buttonSearch_Click"/>
+                    <Button x:Name="buttonInOrder" Content="getInOrder" HorizontalAlignment="Left" Margin="43,165,0,0" VerticalAlignment="Top" Width="75" Click="buttonInOrder_Click"/>
+                    <Button x:Name="buttonPreOrder" Content="getPreOrder" HorizontalAlignment="Left" Margin="43,190,0,0" VerticalAlignment="Top" Width="75" Click="buttonPreOrder_Click"/>
+                    <Button x:Name="buttonPostOrder" Content="getPostOrder" HorizontalAlignment="Left" Margin="43,218,0,0" VerticalAlignment="Top" Width="75" Click="buttonPostOrder_Click"/>
+                    <Button x:Name="buttonFindMin" Content="Find min" HorizontalAlignment="Left" Margin="43,247,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+                    <Button x:Name="buttonFindMax" Content="Find max" HorizontalAlignment="Left" Margin="43,275,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
                     <TextBox x:Name="textBoxAdd" HorizontalAlignment="Left" Height="23" Margin="141,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <TextBox x:Name="textBoxDelete" HorizontalAlignment="Left" Height="23" Margin="141,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <TextBox x:Name="textBoxS" HorizontalAlignment="Left" Height="23" Margin="141,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

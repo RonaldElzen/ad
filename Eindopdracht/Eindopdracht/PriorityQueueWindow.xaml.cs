@@ -26,20 +26,41 @@ namespace Eindopdracht
             InitializeComponent();
         }
 
+        /// <summary>
+        /// removes item with highest priority from the list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonDequeue_Click(object sender, RoutedEventArgs e)
         {
-
-            queue.dequeue();
-            updateQueue();
+            try
+            {
+                queue.dequeue();
+                updateQueue();
+            }
+            catch (IndexOutOfRangeException)
+            {
+                MessageBox.Show("No items in queue");
+            }
         }
 
+        /// <summary>
+        /// removes item with lowest priority from the list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonEnqueue_Click(object sender, RoutedEventArgs e)
         {
-
-            queue.enqueue(int.Parse(textBoxPriority.Text),textBoxQueue.Text);
-            updateQueue();
+            if(textBoxPriority.Text != "" && textBoxQueue.Text != "")
+            {
+                queue.enqueue(int.Parse(textBoxPriority.Text), textBoxQueue.Text);
+                updateQueue();
+            }
         }
 
+        /// <summary>
+        /// updates the textbox to the new priority queue
+        /// </summary>
         private void updateQueue()
         {
             ArrayList arrList;
@@ -50,11 +71,6 @@ namespace Eindopdracht
             {
                 textBoxShowQueue.Text += arrList[i] + "\r\n";
             }
-        }
-
-        private void textBoxQueue_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

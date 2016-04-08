@@ -27,6 +27,11 @@ namespace Eindopdracht
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Finds the object in the doublylinkedlist
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonFind_Click(object sender, RoutedEventArgs e)
         {
            
@@ -35,6 +40,11 @@ namespace Eindopdracht
             MessageBox.Show(item);
         }
 
+        /// <summary>
+        /// finds the previous node of the current node
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonFindPrevious_Click(object sender, RoutedEventArgs e)
         {
             
@@ -44,25 +54,42 @@ namespace Eindopdracht
 
         }
 
+        /// <summary>
+        /// adds the value of the textbox to the doublylinkedlist
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
             doublyList.add(textBoxAdd.Text);
             updateList();
         }
-
+        
+        /// <summary>
+        /// inserts a new value after the value of the second textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonInsert_Click(object sender, RoutedEventArgs e)
         {
             doublyList.insert(textBoxInsert.Text, textBoxAfter.Text);
             updateList();
         }
 
+        /// <summary>
+        /// deletes the given value of the textbox from the doublylinkedlist
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
             doublyList.remove(textBoxDelete.Text);
             updateList();
         }
 
-
+        /// <summary>
+        /// updates the list in the listbox
+        /// </summary>
         private void updateList()
         {
             string[] arr = doublyList.getList();
@@ -75,6 +102,11 @@ namespace Eindopdracht
             }
         }
 
+        /// <summary>
+        /// finds the last node of the list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonFindLast_Click(object sender, RoutedEventArgs e)
         {
             dNode = doublyList.findLast();
@@ -82,6 +114,11 @@ namespace Eindopdracht
             MessageBox.Show(item);
         }
 
+        /// <summary>
+        /// shows the doublylinkedlist node values in the listbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonReverseList_Click(object sender, RoutedEventArgs e)
         {
             string[] arr = doublyList.getReverseList();

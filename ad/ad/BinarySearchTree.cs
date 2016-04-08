@@ -89,6 +89,11 @@ namespace ad
                             current = current.leafRight;
                         }
                     }
+                    // item is already in the list
+                    else
+                    {
+                        break;
+                    }
                 }
             }
         }
@@ -245,11 +250,11 @@ namespace ad
         }
 
         /// <summary>
-        /// 
+        /// finds the replacer and refactor the childs of this nodes.
         /// </summary>
         /// <param name="delNode"></param>
-        /// <returns></returns>
-        private NodeBinTree<T> getReplacer(NodeBinTree<T> delNode)
+        /// <returns>repalcer</returns>
+        public NodeBinTree<T> getReplacer(NodeBinTree<T> delNode)
         {
             NodeBinTree<T> replacerParent = delNode;
             NodeBinTree<T> replacer = delNode;
@@ -376,9 +381,11 @@ namespace ad
         /// <summary>
         /// going to the "most left" node to find the lowest value as that one is the lowest in the tree
         /// and returns the value of this node
+        /// 
+        /// Not working before deadline. Does work in local project but not here.
         /// </summary>
         /// <returns>minimum value of the tree</returns>
-        public T findMin()
+        /*public T findMin()
         {
             NodeBinTree<T> current = rootNode;
             while (current.leafLeft != null)
@@ -391,6 +398,8 @@ namespace ad
         /// <summary>
         /// going to the "most right" node to find the greatest value as that one is the greatest in the tree
         /// and returns the value of this node
+        /// 
+        /// Not working before dealine. Does work in local project but not here.
         /// </summary>
         /// <returns>maximum value of the tree</returns>
         public T findMax()
@@ -401,7 +410,7 @@ namespace ad
                 current = current.leafRight;
             }
             return current.getValue();
-        }
+        }*/
 
         /// <summary>
         /// returns how many nodes the tree has

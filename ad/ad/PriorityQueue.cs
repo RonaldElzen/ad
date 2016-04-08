@@ -61,21 +61,24 @@ namespace ad
         /// </summary>
         public void dequeue()
         {
-            int min = priorityList[0].priority1;                        //set a min priority by taking the first item of the list
-            int minIndex = 0;
-            for (int i = 1; i < priorityList.Count; i++)
+            if (priorityList.Count > 0)
             {
-                if (priorityList[i].priority1 < min)                    //compare the priority of the current item to the min priority
+                int min = priorityList[0].priority1;                        //set a min priority by taking the first item of the list
+                int minIndex = 0;
+                for (int i = 1; i < priorityList.Count; i++)
                 {
-                    min = priorityList[i].priority1;                    //set the new lowest priority
-                    minIndex = i;
+                    if (priorityList[i].priority1 < min)                    //compare the priority of the current item to the min priority
+                    {
+                        min = priorityList[i].priority1;                    //set the new lowest priority
+                        minIndex = i;
+                    }
                 }
-            }
-            for (int i = 0; i <= priorityList.Count; i++)
-            {
-                if (i == minIndex && priorityList[i].priority1 == min)  //if the current priority equals the declared lowest priority and place in list...
+                for (int i = 0; i <= priorityList.Count; i++)
                 {
-                    priorityList.RemoveAt(i);                           //remove this item
+                    if (i == minIndex && priorityList[i].priority1 == min)  //if the current priority equals the declared lowest priority and place in list...
+                    {
+                        priorityList.RemoveAt(i);                           //remove this item
+                    }
                 }
             }
         }
