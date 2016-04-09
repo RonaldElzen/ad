@@ -18,15 +18,15 @@ namespace ad
 
         }
 
-        public int Hash<T>(T item)
+        /// <summary>
+        /// Method to get the hash value of the item
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public int Hash(T item)
         {
-
-
             long tot = 0;
             char[] charray;
-
-            //Make item a string and make a chararray
-            //NEEDS TO BE CHECKED
 
             charray = item.ToString().ToCharArray();
             for (int i = 0; i < item.ToString().Length - 1; i++)
@@ -41,22 +41,30 @@ namespace ad
             return (int)tot;
         }
 
+        /// <summary>
+        /// Inserts a new item to the Array at index of the hash
+        /// </summary>
+        /// <param name="item"></param>
         public void Insert(T item)
         {
             int hash_value;
             hash_value = Hash(item);
 
+            // if the hash index already a item inserted to it, it should calculate a new hash
             while (data[hash_value] != null)
             {
                 hash_value = hash_value + 1 % data.GetUpperBound(0);
             }
             data[hash_value] = item;
-
-
         }
 
+        /// <summary>
+        /// Removes an item from the array
+        /// </summary>
+        /// <param name="item"></param>
         public void Remove(T item)
         {
+            // calculate the hash of the item.
             int hash_value = Hash(item);
             int i = 0;
             while (data[hash_value] != null)
@@ -67,6 +75,10 @@ namespace ad
             data[hash_value] = default(T);
         }
 
+        /// <summary>
+        /// Method to return the array
+        /// </summary>
+        /// <returns></returns>
         public T[] GetLinearHash()
         {
             return data;
